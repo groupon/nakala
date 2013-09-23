@@ -1,0 +1,14 @@
+.idea
+*.iml
+*.iws
+*.ipr
+target/
+.DS_Store
+*~
+*.tar.gz
+.classpath
+.project
+.settings
+.svn
+*.pyc
+

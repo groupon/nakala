@@ -1,0 +1,8 @@
+INCLUDE * FROM base
+
+FEATURES
+  ACQUARIUM
+  sea world
+  SEAWORLD
+  MARINELAND
+  marine &0 land

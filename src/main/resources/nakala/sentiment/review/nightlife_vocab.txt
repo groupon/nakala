@@ -1,0 +1,62 @@
+INCLUDE * FROM base
+
+FEATURES
+  ale,ales
+  amber
+  bar,bars
+  beer,beers
+  billiard,billiards
+  black &0 jack
+  brandy
+  brew,brews,brewery,breweries
+  casino,casinos
+  cigar &0 bar
+  club,clubs
+  cocktail,cocktails
+  cognac
+  craps
+  dance,dancing
+  distillery
+  dj
+  foosball
+  gamble,gambling
+  hip &0 hop
+  hip hop
+  lager,lagers
+  luau
+  microbrewery
+  night &0 club,clubs
+  on &0 tap
+  pidlsner
+  pub,pubs
+  restaurant,restaurants
+  slot &0 machine,machines
+  spirit,spirits
+  sports &0 bar,bars
+  stout house brews
+  techno
+  tequila,tequilas
+  vineyard,vineyards
+  vodka
+  wine
+  wine bar,bars,cellar,tasting
+  winery,wineries
+
+PROHIBITED OVERRIDE
+  coffee
+  food
+  kid
+  mini,piano,swim bar
+  pool
+
+PLUS_ONE
+  cool
+  fun
+
+MINUS_ONE
+  bored,boring
+  dull
+  loud
+  muddy
+  noisy,noisier,noisiest
+  uninspiring

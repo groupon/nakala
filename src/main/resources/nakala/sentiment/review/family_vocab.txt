@@ -1,0 +1,81 @@
+INCLUDE * FROM base
+
+FEATURES
+  adults,couple,couples,guests,parents,people,anyone,those,traveling,travelling,travel,travelers,travellers,dining,diners,vacation,vacationing,go,going,staying,trip,popular,family,families,visitors,stay with children
+  baby,babies crib,cribs,bed,beds
+  BABY,BABIES,INFANT,INFANTS,FAMILY,FAMILIES,famili,CHILD,CHILDREN,KID,KIDS,TODDLER,TODDLERS ~3 friendly,oriented,recommend,recommended,recommending,recomend,recomended,recomending,recommends,recomends
+  baby,babies,kid,kiddie,kids,junior,children,childrens pool,"play,playing area,ground,grounds","game room,rooms",menu,menus,club,clubs,museum,museums
+  baby sitting &3 arranged,service
+  BABYSITTING &3 arranged,service
+  breast feed,feeds,feeding,fed
+  "cater,caters to" family,families,children,kids,toddlers,baby,babies
+  child care
+  CHILDCARE
+  children,kids,child,kid ~5 "eat,eats,stay,stays ~1 free"
+  children,kids &3 allowed
+  DAYCARE
+  great,perfect,good,suitable,awsome,fantastic,bad,terrible,horrible for family,families
+  have,has,had,offer,offered,offers,provide,provided,provides &5 for babies,children,kids,toddlers,family,families
+  have small children
+  i,we take my,our child,children,kid,kids,son,sons,daughter,daughters
+  my,our KID,KIDS,CHILD,CHILDREN
+  NEWBORN,NEWBORNS
+  nurse,nurses,nursed,nursing  ~5  BABY
+  of,with KIDS
+  place,experience,slide,waterslide,playground,park,space,pool,fun,beds,activities,treats,seats,gifts,bonus,shows,toys,great,perfect,entertaining,entertainment,games,pullout,rollaway,"roll away",especially for &2 kids
+  "there were","we saw" &3 families,toddlers,babies
+  unattended,unaccompanied,uncontrolled,unsupervised,wild children,kids
+  well behaved children
+  YOUNGSTER,YOUNGSTERS
+
+PLUS_ONE
+  baby,babies crib,cribs,bed,beds
+  baby,babies,kid,kiddie,kids,junior,children,childrens pool,"play,playing area,ground,grounds","game room,rooms",menu,menus,club,clubs,museum,museums
+  breast feed,feeds,feeding,fed
+  "cater,caters to" family,families,children,kids,toddlers,baby,babies
+  child care
+  CHILDCARE
+  children,kids,child,kid ~5 "eat,eats,stay,stays ~1 free"
+  children,kids &3 allowed
+  friendly,oriented,recommend,recommended,recommending,recomend,recomended,recomending,recommends,recomends
+  great,perfect,good,suitable,awsome,fantastic for family,families
+  have,has,had,offer,offered,offers,provide,provided,provides &5 for babies,children,kids,toddlers,family,families
+  i,we take my,our child,children,kid,kids,son,sons,daughter,daughters
+  my,our KID,KIDS,CHILD,CHILDREN
+  place,experience,slide,waterslide,playground,park,space,pool,fun,beds,activities,treats,seats,gifts,bonus,shows,toys,great,perfect,entertaining,entertainment,games,pullout,rollaway,"roll away",especially for &2 kids
+  "there were","we saw" &3 families,toddlers,babies
+  well behaved children
+
+MINUS_ONE
+  bad,terrible,horrible for family,families
+  appropriate for &2 single,singles,business
+  childless
+  bar
+  dance,night club
+  hesitate &2 recommend
+  strip joint
+  stay away from this
+  unattended,unaccompanied,uncontrolled,unsupervised,wild children,kids
+
+PROHIBITED
+  adults,adults only
+  babies r us
+  broccoli
+  brotherly love
+  family,children live
+  family owned,owns,run,runs,operates,operated,funeral,event,function,photo,photos,picture,pictures,car,cars,secret,secrets,recipe,recipes
+  gay friendly
+  girlfriends
+  baby carrot,carrots,lettuce
+  like baby
+  man child
+  meatballs
+  owned,run,operated by &3 family
+  potatoes
+  recipe,recipes
+  ribs
+  sausages
+  treat,treated,were like family
+  visiting family
+  without any,my,our children
+

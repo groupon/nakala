@@ -1,0 +1,39 @@
+collection_reader:
+  class_name: com.groupon.nakala.db.TsvCategorizedTextCollectionReader
+  parameters:
+    file_name: keyword_training_data.tsv
+    separator: \t
+    id_field: 0 # 0-based index. In case of database fields, you can use field name.
+    label_field: 1 # 0-based index.
+    text_field: 2 # 0-based index. In case of database fields, you can use field name.
+
+collection_analyzer:
+  class_name: com.groupon.ml.svm.LibSvmTrainerner
+  parameters:
+    find_best_parameters: true
+    number_of_threads: 3
+    sample: 0.3 # sample size for parameter optimization
+    # c: 1.0 # default: 1 -- can be used when find_best_parameters is false
+    # gamma: 0.0001 # default: 1/number of features -- can be used when find_best_parameter is false
+    representer:
+      class_name: com.groupon.nakala.core.TfFeatureWeightTextRepresenter
+      parameters:
+        normalize_by_length: true
+        features:
+          file_name: features_bns.txt
+#              resource: /features_bns.txt
+        tokenizer:
+          class_name: com.groupon.nakalae.RegexpTokenizerStream
+        normalizers:
+          - class_name: com.groupon.nakala.normalization.MarkupRemover
+          - class_name: com.groupon.nakala.normalization.CaseNormalizer
+          - class_name: com.groupon.nakala.normalization.NumberNormalizer
+
+data_stores:
+  - class_name: com.groupon.nakala.db.FlatFileStore
+    parameters:
+      # file_name is actually a file stem: This collection analyzer produces three files:
+      #    filestem.model  : the svm model
+      #    filestem.range  : value range file for scaling new data
+      #    filestem.labels : list of labels in the training data for labeling new data
+      file_name: keyword_training_svm_output

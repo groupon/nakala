@@ -1,0 +1,144 @@
+Vocab files contain zero or more INCLUDE directives and zero
+or more query lists grouped into fields.
+
+
+INCLUDE statements
+==================
+
+An include statement has the following form:
+
+INCLUDE <FIELDS> FROM <VOCAB_NAME>
+
+where <FIELDS> is a comma separated list of field names.
+Supported field names are:
+
+  For review:
+    FEATURES   # defining features of a category
+    PLUS_ONE   # queries signalling positive attitude
+    PLUS_HALF  # queries signalling moderately positive attitude
+    MINUS_ONE  # queries signalling moderately negative attitude
+    MINUS_HALF # queries signalling negative attitude
+
+  For keyPhrase:
+    REQUIRED   # defining required features of a category
+    FEATURES   # defining optional features of a category         (within  5 words)
+    L_FEATURES # features that must come to the left of REQUIRED  (within  5 words)
+    R_FEATURES # features that must come to the right of REQUIRED (within  5 words)
+    REQUIRED   # patterns required to be present
+    PROHIBITED # patterns required not to be present
+
+NOTE: with the current semantics of FEATURES, L_FEATURES and R_FEATURES, at least one feature has
+      to be present along with the one of REQUIRED.
+
+You may also use * to mean include all fields.
+
+<VOCAB_NAME> is the name of the vocabulary from which 
+queries are imported.
+
+NOTES:
+------
+
+An INCLUDE statement should start at the beginning of a line, 
+i.e., it should not be indented.
+
+INCLUDE chains are not followed. For example, if X includes
+some queries from Y and Y itself contains some INCLUDE 
+statements, the INCLUDE statements in Y are not followed.
+
+Examples
+--------
+
+INCLUDE * FROM base
+INCLUDE PLUS_ONE,MINUS_ONE FROM food
+
+
+Fields
+=======
+
+Field specifications have the following form:
+
+FIELD [ORVERRIDE]
+  query1
+  query2
+  ...
+
+Field name should not be indented. Queries coming under a 
+field name must be indented.
+
+The OVERRIDE directive says that the model should forget what
+it was holding in that field up to this point.
+
+Examples
+--------
+
+PLUS_ONE              # add to PLUS_ONE what's here
+  fantastic
+  great
+
+PLUS_HALF OVERRIDE    # replace PLUS_HALF with what's here
+  ok
+
+MINUS_HALF OVERRIDE   # forget MINUS_HALF
+
+
+Queries
+=======
+
+Queries may be single words
+
+  e.g.,
+  fantastic
+  great
+
+Regular expression patterns
+
+  e.g.,
+  go(es|ing)
+  great.*
+  g[eo]t
+
+  NOTE: Formulate regular expressions such that they have a clear prefix. No prefix
+        will cause the searcher to try to match the pattern with every term in index.
+
+a comma-separated list of disjoined simple queries
+
+  e.g.,
+  go(es|ing),went
+
+  Quote expression if you need to use a space in the list
+  e.g.,
+  wetbar,"wet &0 bar" ~3 pool
+
+  NOTE: You can't embed quoted queries
+    For example, this won't parse right:
+    wetbar,"wet,"some other thing" bar" ~3 pool   # bad query
+
+a space-separated list of queries
+
+  e.g.,
+  **SEE NOTE**
+  shoes? stores?              # shoe/shoes within zero or one word of store/stores
+
+  NOTE: Due to an apparent bug in regex queries XY? is not interpreted
+        as X|XY, instead it is interpreted as X.*.
+        Use: store,stores if there is risk of the prefix matching something
+             you don't want.
+
+  would not allow,let &2 dog  # &2 means within 2 words in order  
+  shopping ~10 clothes        # ~10 means within 10 words in any order
+
+a macro. At this point the only macro is @NUMERAL, which matches digits and spelled out numbers
+
+  e.g.,
+  @NUMERAL person jacuzzi  # matches 2-person jacuzzi or two-person jacuzzi
+
+Flagging words for highlighting
+===============================
+
+if a word is in ALL CAPS, it will be highlighted in the output.
+
+  e.g.,
+  MARINELAND
+  marine land
+
+  The word "marineland" will be show up at "<B>marineland</B>" in the output.

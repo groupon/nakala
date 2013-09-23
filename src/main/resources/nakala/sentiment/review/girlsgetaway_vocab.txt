@@ -1,0 +1,37 @@
+INCLUDE PLUS_ONE FROM cleanliness
+INCLUDE PLUS_ONE FROM quiet
+INCLUDE MINUS_ONE FROM base
+
+FEATURES
+  DIVA,DIVAS
+  GIRL,GIRLS,MOM,MOMS,WOMEN,WOMENS   GETAWAY,VACATION,only,NIGHT
+  GIRLFRIENDS
+  GIRLIE
+  hanging PJ
+  my GIRLFRIENDS
+  spent time &3 GIRLFRIENDS
+
+PROHIBITED
+  adult,adults
+  baby,babies
+  babysitter,babysiters,babysitting
+  breast feeds,feeding,fed
+  brother,brothers
+  child,children
+  daycare
+  family,famili
+  infant
+  little one,ones
+  my,our kid,kids
+  newborn
+  nurse,nursed,nurses,nursing
+  of,with kids
+  parent,parents
+  sister,sisters
+  youngster,youngsters
+
+PLUS_ONE
+  experienced
+  expert
+  gentle
+  master

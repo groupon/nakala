@@ -1,0 +1,34 @@
+collection_reader:
+  class_name: com.groupon.nakala.db.TsvIdentifiableTextCollectionReader
+  parameters:
+    file_name: <path_to_corpus>
+    separator: \|
+    id_field: 0
+    text_field: 6
+
+analyzer:
+  class_name: com.groupon.nakala.sentiment.SentimentAnalyzer
+  parameters:
+    domains:
+      - cleanliness
+      - family
+      - food
+      - location
+      - luxury
+      - nightlife
+      - overall
+      - parking
+      - pet
+      - quiet
+      - romance
+      - staff
+      - value
+      - view
+      - would_return
+
+data_stores:
+  - class_name: com.groupon.nakala.db.FlatFileStore
+    parameters:
+      file_name: <path_to_output>
+
+number_of_threads: 7

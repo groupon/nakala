@@ -1,0 +1,75 @@
+INCLUDE * FROM base
+
+FEATURES
+  AFFORDABLE
+  BARGAIN
+  bill,bills
+  BUDGET travel,traveller
+  CHEAP,CHEAPER,CHEAPEST
+  COST,COSTS
+  COMPLIMENTARY
+  COUPON,COUPONS
+  CREDIT CARD,CARDS
+  DEAL,DEALS
+  DISCOUNT,DISCOUNTS
+  EXPENSIVE
+  FREE
+  INEXPENSIVE
+  money
+  my,our,"on a" BUDGET
+  nickel dimed
+  overprice,overpriced
+  over price,priced
+  PRICE,PRICE,PRICED,PRICES,PRICY,PRICEY
+  PROMO,PROMOTION,PROMOTIONS
+  RATE,RATES
+  good,great,best VALUE,VALUES
+  VOUCHER,VOUCHERS
+  wallet,wallets
+  worth "the price","every penny"
+
+PLUS_ONE
+  affordable,affordably
+  cheap,cheaper,cheapest
+  easy on wallet
+  free
+  good,great deal,offer,value
+  inexpensive
+  less expensive
+  low price
+  on offer
+  worth "the price","every penny"
+  worth &5 money
+
+MINUS_ONE
+  bad,terrible,awful deal,offer,value
+  big,hefty,high price,prices
+  expensive
+  have to pay for
+  hidden charge,charges
+  if price was right
+  if &3 price,prices ~2 lower,lowered
+  money &0 pit
+  nickel dimed,dimmed
+  overprice,overpriced
+  over price,priced
+  price,prices,pricewise ~3 high,steep
+  pricy,pricey
+  price,prices &2 gone,went up
+  rip,ripped off
+  refuse,refused ~3 refund
+  small,tiny &2 for the price
+  wallet empty
+  worthless
+
+PROHIBITED
+  best &0 value &0 surf &0 inn
+  check in,out
+  complimentary,free newspaper
+  cost them
+  milk,dairy,alcohol,duty,fat,leash,sugar,stress,smoke,incident,worry,noise,hassle,trouble,pain,pains,clutter free
+  exchange rate,rates
+  a great deal of
+  big deal
+  deal with
+  at all cost,costs

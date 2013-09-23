@@ -1,0 +1,32 @@
+INCLUDE * FROM base
+INCLUDE PLUS_ONE,MINUS_ONE FROM cleanliness
+
+FEATURES
+  ANTIQUE
+  ARTISAN
+  CERAMICS
+  farmers
+  gathering
+  GIFT,GIFTS
+  JEWELRY
+  MARKET
+  papier
+  PARISIAN
+  shipping
+  SHOP,SHOPS
+  store crowds
+  store,stores
+
+PROHIBITED OVERRIDE
+  certificate
+  coffee
+
+PLUS_ONE
+  good choice
+  INEXPENSIVE
+
+MINUS_ONE
+  limited choice
+  salvage
+  salvaged
+  stolen

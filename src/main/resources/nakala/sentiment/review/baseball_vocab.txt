@@ -1,0 +1,26 @@
+INCLUDE * FROM base
+INCLUDE PLUS_ONE,MINUS_ONE FROM cleanliness
+
+FEATURES
+  ATHLETIC facility,facilities
+  BALLPARK,BALLPARKS
+  BASEBALL
+  BASEMAN
+  CATCHER
+  DUGOUT
+  four ball,balls
+  HOMERUN,HOMERUNS
+  INNING,INNINGS
+  UMPIRE,UMPIRES
+
+PROHIBITED OVERRIDE
+  basketball
+  football
+  soccer
+  tennis
+
+PLUS_ONE
+  fast
+
+MINUS_ONE
+  slow

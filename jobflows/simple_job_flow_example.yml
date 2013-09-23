@@ -1,0 +1,58 @@
+# This is an example of a simple job flow specification
+# The entries collection_reader, collection_analyzer, and data_store are required.
+# Each entry requires at least a class_name.
+# parameters are a list of attribute and values. Values could be parameters themselves.
+# data_stores contains a list of DataStore specifications. At least one DataStore is required.
+
+collection_reader:
+  # fully specified name of a CollectionReader
+  class_name: com.groupon.nakala.db.SimpleTextCollectionReader
+  parameters:
+    separator: \t
+    text_field: 2 # 0-based index. In case of database fields, you can use field name.
+#    title_field: 1 # 0-based. In case of database fields, you can use field name.
+#    label_field: 3 # 0-based index of comma-separated labels. In case of database fields, you can field name.
+#    id_field: 0 # 0-based index. In case of database fields, you can use field name.
+#    file_name: corpus.tsv
+#    host: 127.0.01
+#    port: 8080
+#    db_name: yelp
+#    collection_name: chicago_merchants
+#    table_name: chicago_merchants
+
+collection_analyzer:
+  # fully specified name of a CollectionAnalyzer
+  class_name: com.groupon.nakala.analysis.IdfCollectionAnalyzer
+#  parameters:
+#    pass_filter:
+#      class_name: com.groupon.nakalae.RegexpPassFilter
+#      file_name: filename.txt  # specify either an input file name or resource
+#      resource: resource.txt
+#    block_filter:
+#      class_name: com.groupon.nakalae.RegexpPassFilter
+#      file_name: filename.txt  # specify either an input file name or resource
+#      resource: resource.txt
+#    tokenizer: com.groupon.nakalae.RegexpTokenizerStream
+#    normalizers:
+#      - com.groupon.nakalamalization.MarkupRemover
+#      - com.groupon.nakalamalization.CaseNormalizer
+#      - com.groupon.nakalamalization.NumberNormalizer
+#    stopwords:
+#      file_name: stopwords.txt
+#      resource: stopwords.txt
+#    min_df: 3 # specify minimum document frequency of a feature in feature selection analyzers (e.g., BnsWeightCalculator)
+
+data_stores:
+# List of datastores
+  - class_name: com.groupon.nakala.db.FlatFileStore
+    parameters:
+      text_field: 2 # 0-based index. In case of database fields, you can use field name.
+  #    title_field: 1 # Database field name.
+  #    label_field: 3 # Database field name.
+  #    id_field: 0 # Database field name.
+  #    file_name: output.tsv
+  #    host: 127.0.01
+  #    port: 8080
+  #    db_name: yelp
+  #    collection_name: chicago_merchants
+  #    table_name: chicago_merchants

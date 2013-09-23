@@ -1,0 +1,60 @@
+INCLUDE * FROM base
+
+FEATURES
+  AMOURE
+  blooming
+  blossoms
+#  CHARMING
+#  COSY
+  couple friendly
+  COUPLES
+  COURTSHIP
+#  COZY
+  crawling,overrun,"over run" with children
+  crying,screaming ~3 babies,kids
+  destination ~1 WEDDING
+  HANKY PANKY
+  good,great,perfect,suitable,recommend,recommended &3 HONEYMOON,HONEYMOONS,HONEYMOONER,HONEYMOONERS,HONEYMOONED,"a date",dates
+  INTIMATE
+  making,made LOVE
+  MARRIAGE proposal
+  for my,our RELATIONSHIP,HONEYMOON
+  premium BEDDING
+  RECKINDLE,REKINDLED
+  resort WEDDING
+  ROMANCE,ROMANTIC,ROMANTICALLY
+  SWEETHEART,SWEETHEARTS
+  SWEET heart,hearts
+  "there were","we saw" &3 families,toddlers,babies
+  there are children,kids everywhere
+  TRANQUIL,TRANQUILITY
+  VALENTINE
+  WEDDING cake,cakes,package
+  WHOOPEE
+  young couple,couples
+
+PROHIBITED OVERRIDE
+  her boyfriend,"boy friend"
+  his girlfriend,"girl friend"
+  hooker,hookers
+  other couples
+  propositioned
+  prostitute,prostitutes
+  racheal
+
+PLUS_ONE
+#  CHARM,CHARMING
+  COSY
+  COZY
+  crawling with children
+  friendly
+  good,great,perfect,suitable &3 HONEYMOON,HONEYMOONS,HONEYMOONER,HONEYMOONERS,HONEYMOONED,"a date",dates
+  LUXURY,LUXURIOUS,LUXURIOUSLY,LUXE
+  ROMANCE,ROMANTIC,ROMANTICALLY
+
+MINUS_ONE
+  crawling,overrun,"over run" with children
+  crying,screaming ~3 babies,kids
+  faded charm
+  there are children,kids everywhere
+  "there were","we saw" &3 families,toddlers,babies

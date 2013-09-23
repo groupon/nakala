@@ -1,0 +1,67 @@
+INCLUDE * FROM base
+
+FEATURES
+  aqua
+  boat,boats
+  CANOE,CANOES
+  clear water,waters
+  coral,carals
+  dinner cruise,cruises
+  dock,docks
+  dolphin,dolphics
+  fisherman,fishermen
+  fishing
+  KAYAK
+  life preserver,preservers
+  life vest,vests
+  lifejacket,lifejackets
+  mad river,rivers
+  marin,marine
+  ocean activities
+  outrigger
+  paddle,paddles
+  paddling
+  PARASAILING
+  RAFT,RAFTING,RAFTS
+  regatta
+  SAIL,SAILING,SAILED,SAILS
+  SAILBOARD,SAILDBOARDS
+  sea
+  seabound
+  seal watching
+  seashell,seashells
+  seashore,seashores
+  shelling
+  ship,ships
+  SHIPWRECK,SHIPWRECKS
+  SNORKELING,SNORKLING
+  spinnaker
+  sun bathe,bathed,bathing
+  sunbathe,sunbathed,sunbathing
+  surf
+  SURF,SURFS,SURFED,SURFING,SURFER,SURFERS
+  SURF,SURFING board,boards
+  SURFBOARD,SURFBOARDS
+  SURFBOARDING
+  SWIMMING
+  tan
+  tan,tanning,tanned
+  tide,tides
+  TIDEPOOL,TIDEPOOLS
+  water apparel,outdoor
+  waterfront
+  waterproof
+  WATERSKI,WATERSKIING
+  wave ride,riding
+  wetsuit,wetsuits
+  wharf
+  white water
+  whitewater
+  WINDSURF,WINDSURFING,WINDSURFER,WINDSURFERS
+  yacht,yachts
+
+PROHIBITED OVERRIDE
+  coffee
+  fisherman,fishermans wharf
+  food
+  view

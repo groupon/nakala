@@ -1,0 +1,19 @@
+INCLUDE * FROM base
+INCLUDE PLUS_ONE,MINUS_ONE FROM cleanliness
+
+FEATURES
+  bar,bars
+  lounge
+  pub,pubs
+
+PROHIBITED OVERRIDE
+  legal
+
+PLUS_ONE
+  large
+  bright
+  smooth floor
+
+MINUS_ONE
+  slippery
+  uneven

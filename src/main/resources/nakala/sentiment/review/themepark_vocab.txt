@@ -1,0 +1,16 @@
+INCLUDE * FROM base
+PROHIBITED OVERRIDE
+INCLUDE PROHIBITED,PLUS_ONE,MINUS_ONE FROM museum
+
+FEATURES
+  amusement,luna park,parks
+  DISNEYLAND
+  DISNEYWORLD
+  magic &0 kingdom,mountain
+  roller COASTER,COASTERS
+  sea park,pakrs
+  SEAWORLD
+  six &0 flags
+  theme park,parks
+  THEMEPARK,THEMEPARKS
+  universal &0 studios

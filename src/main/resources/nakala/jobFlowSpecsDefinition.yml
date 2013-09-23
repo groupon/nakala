@@ -1,0 +1,336 @@
+# Format of specs definitions
+#
+# <label>:
+#   value_type: {map,list,string,boolean,integer,double,string_or_integer}
+#   list_type: {<label>,string} # Only used when value_type is list.
+#   required:
+#     - <label>
+#     - <label>
+#     ...
+#   parameters:
+#     - <label>
+#     - <label>
+#     ...
+
+# Simple Job Flows all assume the existence of
+#  collection reader
+#  collection analyzer
+#  data stores
+# Do not change this for simple job flows
+
+top:
+  value_type: map
+  required:
+    - collection_reader
+    - collection_analyzer
+    - data_stores
+
+collection_reader:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - collection_name
+    - db_name
+    - file_name
+    - host
+    - id_field
+    - label_field
+    - port
+    - proxy
+    - separator
+    - table_name
+    - text_field
+    - title_field
+
+collection_analyzer:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - analyzer
+    - batch_size
+    - block_filter
+    - find_best_parameters
+    - sample
+    - min_df
+    - min_precision
+    - min_tp
+    - models
+    - normalizers
+    - pass_filter
+    - representer
+    - stopwords
+    - tokenizer
+    - max_threshold
+    - min_threshold
+    - threshold_step
+    - gamma
+    - c
+    - target_class
+    - weights
+    - max_feature_size
+    - min_feature_weight
+    - number_of_threads
+    - use_absolute_values
+    - index_dir
+    - reuse_index
+    - overwrite
+    - features
+    - generate_negative_queries
+
+data_stores:
+  value_type: list
+  list_type: data_store
+
+data_store:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - collection_name
+    - db_name
+    - file_name
+    - host
+#      - id_field
+#      - label_field
+    - port
+#      - separator
+    - table_name
+#      - text_field
+#      - title_field
+
+index_dir:
+  value_type: string
+
+min_tp:
+  value_type: integer
+
+min_precision:
+  value_type: double
+
+reuse_index:
+  value_type: boolean
+
+overwrite:
+  value_type: boolean
+
+representer:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - normalize_by_length
+    - features
+    - tokenizer
+    - normalizers
+    - scaler
+    - model
+    - number_of_threads
+
+scaler:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - file_name
+    - resource
+
+normalize_by_length:
+  value_type: boolean
+
+features:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - file_name
+    - resource
+
+normalizer:
+  value_type: map
+  required:
+    - class_name
+
+parameters:
+  value_type: map
+
+use_absolute_values:
+  value_type: boolean
+
+generate_negative_queries:
+  value_type: boolean
+
+# class_name is special. When an item has the class_name attribute, an object of that class is instantiated
+# and if parameters are specified, the parameters are passed to the object.
+
+class_name:
+  value_type: string
+
+# Collection reader options
+
+# -- db collection reader options (including mongo)
+
+db_name:
+  value_type: string
+
+host:
+  value_type: string
+
+port:
+  value_type: string
+
+proxy:
+  value_type: string
+
+table_name:
+  value_type: string
+
+#  -- mongo collection reader options
+
+collection_name:
+  value_type: string
+
+
+# -- text file collection reader options
+
+file_name:
+  value_type: string
+
+resource:
+  value_type: string
+
+separator:
+  value_type: string
+
+# -- these are also applicable to db readers
+
+id_field:
+  value_type: string_or_integer
+
+label_field:
+  value_type: string_or_integer
+
+text_field:
+  value_type: string_or_integer
+
+title_field:
+  value_type: string_or_integer
+
+
+# collection analyzer parameters
+
+analyzer:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - analyzers
+    - features
+    - model
+    - labels
+    - representer
+    - number_of_threads
+
+analyzers:
+  value_type: list
+  list_type: analyzer
+
+models:
+  value_type: list
+  list_type: model
+
+block_filter:
+  value_type: map
+
+model:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - file_name
+    - resource
+
+labels:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - file_name
+    - resource
+
+# -- svm trainer options
+
+find_best_parameters:
+  value_type: boolean
+
+sample:
+  value_type: double
+
+gamma:
+  value_type: double
+
+c:
+  value_type: double
+
+number_of_threads:
+  value_type: integer
+
+# weights in used in LibSvmTrainer
+# Usage Example:
+# weights: 0:1.0, 1:2.0
+#
+# The above means the weight of class 0 is 1.0
+#             and the weight of class 1 is 2.0
+# The class indeces are from the indeces libsvm assigns
+# to classes. So it's best to use this option after one
+# run so you know how libsvm orders your categories.
+
+weights:
+  value_type: string
+
+# -- min_df is used in many analyzers
+
+min_df:
+  value_type: integer
+
+max_feature_size:
+  value_type: integer
+
+min_feature_weight:
+  value_type: double
+
+target_class:
+  value_type: string
+
+normalizers:
+  value_type: list
+  list_type: normalizer
+
+pass_filter:
+  value_type: map
+
+stopwords:
+  value_type: map
+
+tokenizer:
+  value_type: map
+
+max_threshold:
+  value_type: double
+
+min_threshold:
+  value_type: double
+
+threshold_step:
+  value_type: double
+
+batch_size:
+  value_type: integer
+
+# Sentiment analyzer options
+
+domains:
+  value_type: list
+  list_type: string
+

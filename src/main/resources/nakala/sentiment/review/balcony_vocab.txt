@@ -1,0 +1,18 @@
+INCLUDE * FROM base
+
+FEATURES
+  BALCONY
+  LANAI
+  TERRACE
+
+PROHIBITED
+  lobbyist,lobbyists
+
+PLUS_ONE
+  bright
+  colorful
+  distinct
+  elegant
+  floor
+  large
+  smooth

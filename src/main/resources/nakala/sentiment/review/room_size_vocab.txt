@@ -1,0 +1,22 @@
+FEATURES
+  room,rooms,suite,suites ~5 "ample space",big,expansive,huge,large,roomy,sizable,sizeable,spacious,spaceous,vast,confined,cramped,"limited size",narrow,small,tight,tiny
+
+PLUS_ONE
+  ample space
+  big
+  expansive
+  huge
+  large
+  roomy
+  sizable,sizeable
+  spacious,spaceous
+  vast
+
+MINUS_ONE
+  confined
+  cramped
+  limited size
+  narrow
+  small
+  tight
+  tiny

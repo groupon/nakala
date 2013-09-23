@@ -1,0 +1,25 @@
+INCLUDE * FROM base
+
+FEATURES
+  accept,accepted,accepts,allow,allows,allowed,welcome,welcomes,welcomed,treat,treats,treated,treatment,ok,okay ~5 pet,pets,cat,cats,dog,dogs
+  animal,cat,dog,pet friendly,friendlier,friendlies
+  can bring dog,dogs,cat,cats,pet,pets
+  dog walker,walkers,walking,park,parks
+  for our dog,dogs,cat,cats,pet,pets
+  friendly,friendlier,friendlies &0 to &0 pets
+  leash free
+  people,family,families,guest,guests &3 with &3 pet,pets,dog,dogs,cat,cats
+  pet,dog sitter,sitters,sitting ~5 provide,provided,available,offer,offered,offers
+  pet room,rooms,accommodation,accommodations
+
+PLUS_ONE
+  accept,accepted,accepts,allow,allows,allowed,welcome,welcomes,welcomed,treat,treats,treated,treatment,ok,okay
+  friendly,friendlier,friendlies
+  can bring dog,dogs,cat,cats,pet,pets
+  dog walker,walkers,walking,park,parks
+  for our dog,dogs,cat,cats,pet,pets
+  friendly,friendlier,friendlies &0 to &0 pets
+  leash free
+  people,family,families,guest,guests &3 with &3 pet,pets,dog,dogs,cat,cats
+  pet,dog sitter,sitters,sitting ~5 provide,provided,available,offer,offered,offers
+  pet room,rooms,accommodation,accommodations

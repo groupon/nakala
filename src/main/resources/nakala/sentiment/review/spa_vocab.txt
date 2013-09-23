@@ -1,0 +1,44 @@
+INCLUDE * FROM base
+INCLUDE PLUS_ONE,MINUS_ONE FROM cleanliness
+INCLUDE PLUS_ONE,MINUS_ONE FROM quiet
+
+FEATURES
+  ACCUPUNCTURE
+  AROMATHERAPY
+  body scrub,scrubs,treatment,treatments,wrap,wraps
+  day SPA,SPAS
+  deep tissue
+  destination spa,spas
+  dry SAUNA,SAUNAS
+  EXERCISE room,equipment,facility,facilities
+  FACIAL,FACIALS
+  hot springs,stones
+  HOTTUB,HOTTUBS
+  JACUZZI,JACUZZIS
+  laser,MASSAGE treatment,treatments
+  MEDICINAL INJECTION,INJECTIONS
+  milk,steam,THERAPY BATH,BATHS
+  pressure,swedish,thai massage,massages
+  REFLEXOLOGY
+  resort,resorts spa,spas
+  SAUNA,SAUNAS
+  SHIATSU
+  spa service,services
+  sports massage,massages
+  WHIRLPOOL,WHIRLPOOLS
+
+PLUS_ONE
+  experienced
+  EXPERT,EXPERTS
+  GENTLE
+  LUXURY,LUXURIOUS,LUXURIOUSLY,LUXE
+  master
+
+MINUS_ONE
+  broken
+  if had worked
+  moth
+  scent
+
+PROHIBITED
+  facial soap,hair

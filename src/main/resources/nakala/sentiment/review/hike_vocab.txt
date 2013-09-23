@@ -1,0 +1,26 @@
+INCLUDE * FROM base
+
+FEATURES
+  COASTWALK
+  HIKE,HIKES,HIKED,HIKING
+  MOUNTAIN,MOUNTAINSIDE,MOUNTAINSIDES
+  OUTDOOR,OUTDOORS
+  STROLL,STROLLED,STROLLES
+  TRAIL,TRAILS
+  TREKKING,TREKS
+  WALKING
+  WILDERNESS
+
+PLUS_ONE
+  difficult
+  easy,easier,easiest
+  moderate,moderately
+  paved
+  smooth
+  strenious
+
+MINUS_ONE
+  boring
+  dull
+  muddy
+  uneven

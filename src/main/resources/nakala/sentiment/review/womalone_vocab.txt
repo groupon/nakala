@@ -1,0 +1,24 @@
+INCLUDE * FROM base
+
+FEATURES
+  female alone
+  on my own
+  single female,GIRL,WOMAN
+  WOMEN themselves
+
+PROHIBITED OVERRIDE
+  cent
+  dime
+  dollar
+  internet
+  money
+
+MINUS_ONE OVERRIDE
+  alpha male
+  guy concerned
+  guy wary of
+  hit female,woman,women
+  out of his way
+  uncomfortable
+  unsuitable
+  unwanted attention

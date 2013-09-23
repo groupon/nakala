@@ -1,0 +1,15 @@
+FEATURES
+  line,lines
+  wait,waited
+  crowd,crowds,crowded
+
+PLUS_ONE
+  plenty place,places sit
+  short,brief ~3 wait,lines
+
+MINUS_ONE
+  crowd,crowds,crowded
+  long ~3 wait,lines
+  place is,gets,was packed
+  waited &3 in line
+  wait,waited

@@ -1,0 +1,115 @@
+INCLUDE * FROM base
+
+FEATURES
+  bark,barks,barked,barking
+  blaring
+  BUCOLIC,BOCOLIC
+  boisterous
+  CALM
+  clatter
+  construction project,site
+  crying,screaming ~3 babies,kids
+  deafening
+#  DISCREET
+  dog behave,behaved,behaving,behaves
+  EARSPLITTING
+  halcyon
+  hammock,hammocks
+  hard to hear
+  jackhammer,jackhammers
+  kids &3 running around
+  lawn chair,chairs
+  loud
+  LOUNGING
+  NOISELESS
+  noise,noisy
+  obtrusive
+  PEACE,PEACEFUL
+  piercing
+  QUIET
+  raucous
+  RELAXING
+  RESTFUL
+  road construction
+  rowdy
+  SERENE
+  screaming
+  SILENT
+  sleep,slept like baby,babies
+  sound,noise &3 bother,bothers,bothered
+  sound insulation
+  SOUNDPROOF,SOUNDPROOFING
+  strident
+  SUBDUED
+  train whistle
+  TRANQUIL
+  troubled
+  UNOBTRUSIVE
+  UNTROUBLED
+  unattended,unaccompanied,uncontrolled,unsupervised,wild children,kids
+
+PROHIBITED
+  rest of the
+  the rest of
+  requested,"asked,look,looked,looking,hoped,hoping for","look,looked,looking forward to" &2 quiet,calm,restful
+  keep,stay,remain quiet about
+
+PLUS_ONE
+  away from "it all",noise,noisy
+  BUCOLIC,BOCOLIC
+  CALM
+  DISCREET
+  for rest
+  get in touch with soul
+  halcyon
+  lowness
+  noise &4 minimum
+  MUTED
+  NOISELESS
+  off &2 street
+  PEACE,PEACEFUL
+  QUIET
+  RELAX,RELAXED,RELAXING,RELAXES
+  RESTFUL
+  SERENE
+  SILENT
+  sleep,slept like baby,babies
+  soundproof,soundproofing
+  SUBDUED
+  to rest
+  TRANQUIL
+  UNEVENTFUL
+  UNOBTRUSIVE
+  UNTROUBLED
+  without,no,not &3 noise
+
+MINUS_ONE
+  bark,barks,barked,barking
+  blaring
+  boisterous
+  clatter
+  complain,complains,complained,complaining,complaint,complaints
+  construction project,site
+  crying,screaming ~3 babies,kids
+  deafening
+  earsplitting
+  far from soundproof
+  hard to hear
+  howling
+  jackhammer,jackhammers
+  kids &3 running around
+  loud
+  noise,noisy
+  obtrusive
+  piercing
+  raucous
+  right on &2 street
+  road construction
+  rowdy
+  strident
+  screaming
+  sound,noise &3 bother,bothers,bothered
+  train whistle
+  troubled
+  unattended,unaccompanied,uncontrolled,unsupervised,wild children,kids
+  wailing

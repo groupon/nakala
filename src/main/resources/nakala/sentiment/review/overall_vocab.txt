@@ -1,0 +1,77 @@
+INCLUDE * FROM base
+
+FEATURES
+  accommodation,acommodation,accomodation,accommodations,acommodations
+  all in all
+  ambiance,ambience
+  amenity,amenities
+  atmosphere
+  b b
+  bed breakfast
+  breeze
+  building
+  cabana
+  cabin,cabins
+  climate
+  complimentary,complementary
+  completely,fully,thoroughly   happy,satisfied
+  condo,condos
+  cottage,cottages
+  excellent,great,perfect    find
+  experience
+  exterior
+  facility,facilities
+  feeling
+  grounds
+  had great time,times
+  hotel,hotels
+  hostel,hostels
+  housekeeping
+  landscape,landscaping
+  living condition,conditions
+  master
+  motel,motels
+  overall
+  property
+  renovated,renovation,renovations
+  security
+  setting
+  stay,stayed
+  studio
+  temperature
+  villa
+  whole thing
+
+PLUS_ONE
+  completely,fully,thoroughly   happy,satisfied,content
+  excellent,great,perfect       find
+  had a great time
+  no frills
+  recommend,recommended
+  worth the price
+
+MINUS_ONE
+  dont,don    waste money
+  look,stay   "anywhere,somewhere,nowhere else","any,no,some where,place else",elsewhere
+  money pit
+  only charming,good,plus,positive
+  peeling off
+  stay,steer  away,"clear of"
+  hesitate stay here,there
+  hesitate &2 recommend
+  hotel &4 cleaner than this
+
+PROHIBITED
+  at,in   another,other      hotel,hotels,motel,motels,resort,resorts,restaurant,resorts,place,places
+  didn,"did not"   stay
+  legal
+  stay  ~3 short
+  like ~3 dislike
+  positive ~1 negative
+  hotel,motel amenity,amenities,staff,like,restaurant
+  typical
+  has never been my experience
+  stay "somewhere else",elsewhere for change
+  may not have stayed
+  luxury &0 hotel
+  hotels &0 .com

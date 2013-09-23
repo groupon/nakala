@@ -1,0 +1,97 @@
+INCLUDE * FROM base
+
+FEATURES
+  air balloon
+  amphitheater
+  ancient
+  arched
+  architect,architecture,architectural
+  attraction,attractions
+  ballooning
+  battleship
+  board walk,walks
+  boardwalk,boardwalks
+  canyon,canyons
+  castle,castles
+  cave,caves
+  century,centuries
+  cliff
+  cobblestone,cobblestones
+  colonial
+  crowned
+#  dating
+  double decker
+  dedicate,dedicates,dedicated,dedicating
+  destroyed
+  dome
+  donate
+  dramatic
+  eco tourism
+  ecotourism
+  facade
+  flightseeing
+  fortification
+  founded
+  fountain,fountains
+  gorge,gorges
+  gothic
+  helicopter,helicopters
+  historic,historical,history
+  hostile
+  inagurated
+  landmark
+  lighthouse
+  magnificent
+  majestic
+  mansion
+  medieval
+  place
+  mill
+  monument
+  natural bridge
+  noble
+  oceanfront
+  oldest
+  ornaments
+  palazzo
+  panorama
+  passageways
+  pier
+  portal
+  professional guide,guides,tour,tours
+  promenade,promenades
+  rainforest,rainforests
+  rectangular
+  restoration
+  roman,mayan,greek ruins
+  scenery
+  sightseeing
+  statue,statues
+  surrounding,surroundings
+  tomb,tombs
+  tour,tours
+  tower,towers
+  verandah,verandahs
+  victorian house,houses
+  walk,walks
+  waterfall,waterfalls
+
+PROHIBITED OVERRIDE
+  hotel
+  room
+
+PLUS_ONE
+  accessible
+  EDUCATION,EDUCATIONAL
+  HISTORIC,HISTORICAL
+  interest,interesting
+  old
+  splended
+  visible
+
+MINUS_ONE
+  bored,boring
+  dull
+  muddy
+  uneven
+  uninspiring

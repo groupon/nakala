@@ -1,0 +1,37 @@
+INCLUDE * FROM base
+INCLUDE PLUS_ONE,MINUS_ONE FROM cleanliness
+
+FEATURES
+  bus,buses
+  cable car,cars
+  driver,drivers
+  freeway,freeways
+  highway,highways
+  pick up,ups
+  SHUTTLE,SHUTTLES
+  taxi,taxis
+  transport,transportation,transportations
+  trolley,trolleys
+  van,vans
+
+PROHIBITED OVERRIDE
+  restaurant,restaurants
+
+PLUS_ONE
+  close &0 to
+  CONVENIENT
+  fast,faster,fastest
+  immediate,immediately
+  next &0 to
+  quick,quicker,quickest,quickly
+  rapid,rapidly
+  speed,speedy,speedier,speediest
+  swift
+
+MINUS_ONE
+  delay,delays
+  inconvenient
+  long
+  slow,slower,slowest,slowly
+  traffic
+  wait,waits,waited,waiting

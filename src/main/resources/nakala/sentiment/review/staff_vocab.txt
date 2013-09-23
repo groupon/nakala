@@ -1,0 +1,132 @@
+#INCLUDE * FROM base
+
+FEATURES
+  attendant,attendants
+  bartender,bartenders
+  bellman,bellmen
+  chancellor,chancellors
+  clerk,clerks
+  CONCIERGE,CONSIERGE,CONCEIGE,CONSEIRGE
+  customer service
+  doorman,doormen
+  employee,employees
+  front,reception desk
+  HOSPITALITY
+  host,hosts
+  hostess,hostesses
+  innkeeper,innkeepers
+  maid,maids
+  management
+  manager,managers
+  on duty
+  personnel
+  porter
+  proprietor
+  receptionist
+  staff
+  tour desk
+  transportation desk
+
+PROHIBITED
+  basketball
+  better &0 management,staff &0 would
+  fish
+  food
+  football
+  i,we felt bad for
+  restaurant,restaurants
+  soccer
+  tennis
+  toilet,toilets
+
+PLUS_ONE
+  AFFABLE
+  AMICABLE
+  ACCOMMODATE,ACCOMMODATING,ACCOMMODATED
+  APPROACHABLE
+  ATTENTIVE
+  AWESOME
+  BEST
+  BETTER
+  BRIGHT
+  BRILLIENT
+  CIVIL
+  clever
+  CONSIDERATE
+  CORDIAL
+  CORTEOUS
+  COURTLY
+  eager to please
+  EFFICIENT
+  FABULOUS
+  FANTASTIC
+  FINE
+  FRIENDLY
+  FUNNY
+  GALLANT
+  GENTEEL
+  good
+  GRACIOUS
+  great
+  HAPPY
+  HELPFUL
+  KIND,KINDLY
+  KNOWLEDGEABLE
+  NICE,NICER,NICEST
+  OBLIGING
+  on top of it
+  POLITE
+  PROFESSIONAL
+  PROMPT,PROMPTLY
+  REFINED
+  right on point
+  SMART
+  staff,manager,management,owner,owners,host,hosts &5 apologize,apologized
+  standard of excellence
+  THOUGHTFUL
+  top notch,class,drawer
+  well trained
+
+MINUS_ONE
+  amateurish
+  angry
+  arrogant
+  awful,aweful
+  bad,worse,worst
+  be more helpful
+  condescend,condescending
+  disregard
+  distainful
+  dog person
+  dull
+  gone to dogs
+  grouch,grouchy
+  hesitant
+  horrible
+  hostile
+  ignorance
+  ignorant
+  inattentive
+  inconsiderate
+  intrusive
+  jerk
+  like "a dog","an animal"
+  mean
+  miserable
+  misinform,misinformed
+  neglect,neglected,neglecting
+  rude
+  scream
+  shady
+  shouted at
+  slimy
+  slow
+  terrible
+  unacceptable
+  uncivilized,uncivilised
+  been,seen staff treated better 
+  unfriendly
+  unhelpful
+  unresponsive
+  was a dog
+  yell,yelled,yelling

@@ -1,0 +1,46 @@
+INCLUDE MINUS_ONE FROM cleanliness
+INCLUDE * FROM base
+INCLUDE FEATURES FROM cuisine
+
+FEATURES
+  breakfast
+  brunch
+  buffet,buffett
+  coffee shop,shops
+  continental breakfast
+  dessert,desserts
+  diner,diners,dining
+  dinner
+  dish,dishes
+  eat,eating
+  entree,entrees
+  food,foods
+  grill,grills
+  lunch
+  meal
+  menu,menus
+  restaurant,restaurants
+  supper
+  sushi
+  wine
+
+PLUS_ONE
+  APETIZING
+  DELECTABLE
+  DELICACY
+  DELICIOUS
+  EPICUREAN
+  EXQUISITE
+  FEAST
+  FLAVORFUL
+  FRESH
+  GOURMET
+  HEAVENLY
+  INVENTIVE
+  nice,nicer,nicest
+  SCRUMPTIOUS
+  TASTY,TASTIER,TASTIEST
+  YUMMY
+
+MINUS_ONE
+  unappetizing

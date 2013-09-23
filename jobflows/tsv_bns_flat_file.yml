@@ -1,0 +1,36 @@
+# This is an example of a simple job flow specification
+# The entries collection_reader, collection_analyzer, and data_store are required.
+# Each entry requires at least a class_name.
+# parameters are a list of attribute and values. Values could be parameters themselves.
+# data_stores contains a list of DataStore specifications. At least one DataStore is required.
+
+collection_reader:
+  # fully specified name of a CollectionReader
+  class_name: com.groupon.nakala.db.TsvCategorizedTextCollectionReader
+  parameters:
+    file_name: <path_to_training_file>
+    separator: \t
+    id_field: 0 # 0-based index. In case of database fields, you can use field name.
+    label_field: 1 # 0-based index of comma-separated labels. In case of database fields, you can field name.
+    text_field: 2 # 0-based index. In case of database fields, you can use field name.
+
+collection_analyzer:
+  class_name: com.groupon.nakala.analysis.BnsWeightCalculator
+  parameters:
+    tokenizer:
+      class_name: com.groupon.nakalae.RegexpTokenizerStream
+    normalizers:
+      - class_name: com.groupon.nakala.normalization.MarkupRemover
+      - class_name: com.groupon.nakala.normalization.CaseNormalizer
+      - class_name: com.groupon.nakala.normalization.NumberNormalizer
+    min_df: 3
+    min_feature_weight: 0.1
+    max_feature_size: 50000
+    stopwords:
+#      file_name: stopwords.txt
+      resource: /nakala/stopwords.txt
+
+data_stores:
+  - class_name: com.groupon.nakala.db.FlatFileStore
+    parameters:
+      file_name: features_bns.txt

@@ -1,0 +1,32 @@
+INCLUDE * FROM base
+
+FEATURES
+  ALPINE
+  black diamonds
+  bunny HILL
+  chair lift,lifts
+  CHAIRLIFT,CHAIRLIFTS
+  GONDOLAS
+  heli SKI,SKIING
+  hill TRAIL
+  kiddie HILL,HILLS
+  lift ticket,tickets
+  MOGUL,MOGULS
+  quad lift,lifts
+  SKI,SKIS,SKIER,SKIERS,SKIING
+  SLOPE,SLOPES
+  SNOWBOARD,SNOWBOARDING,SNOWBOARDS
+  TELEMARK,TELEMARKING
+  water,wind resistant
+
+PLUS_ONE
+  powder
+  soft
+
+MINUS_ONE
+  ice,icy
+  long ~2 line,lines,wait
+  rocky
+  slow
+  slush
+  wait

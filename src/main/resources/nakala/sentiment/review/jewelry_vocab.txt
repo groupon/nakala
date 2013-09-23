@@ -1,0 +1,60 @@
+INCLUDE * FROM base
+
+FEATURES
+  AMETHYST
+  ANTIQUE JEWELRY
+  AQUAMARINE
+  BRACELETS
+  CITRINE
+  CLASPS
+  DIAMOND
+#  ear
+  EARRINGS
+  EMERALD
+  GARNET
+  GEM,GEMS
+  GEMSTONE,GEMSTONES
+  GIFT,GIFTS JEWELRY
+  GOLD
+  JEWELRY
+  JEWELRY BOUTIQUES,CUBIC,MALL,MALLS,RING,RINGS,RUBY,SHOP,SHOPS,STORE,STORES
+#  multi
+  NECKLACE,NECKLACES
+  ONYX
+  OPAL
+  PEARL
+  PENDANT,PENDANTS
+  PERIDOT JEWELRY
+  PLATINUM
+  PRECIOUS
+  RING,RINGS
+  SAPPHIRE
+  SEMI JEWELRY
+  SILVER
+  STERLING
+  PRECIOUS STONE,STONES
+  TITANIUM
+  TOPAZ
+  UPSCALE JEWELRY
+  ZIRCONIA
+
+PROHIBITED OVERRIDE
+  certificate,certificates
+  coffee
+
+PLUS_ONE
+  abundance
+  affordable
+  art
+  bargains
+  competitive
+  design,designs
+  elegant
+  fine
+  good choice
+  inventory
+  model
+  modern
+  profit
+  promotional
+  selection

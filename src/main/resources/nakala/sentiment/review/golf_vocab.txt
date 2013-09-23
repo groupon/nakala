@@ -1,0 +1,22 @@
+INCLUDE * FROM base
+
+FEATURES
+  @NUMERAL hole
+  BATTING CAGE,CAGES
+  DRIVING RANGE
+  eighteen hole,holes
+  GOLF
+  GOLF CLUB,CLUBS,COURSE,COURSES,STALL,STALLS
+  MINIATURE GOLF
+  nine hole
+  PAR @NUMERAL
+
+PROHIBITED OVERRIDE
+  basketball
+  fish
+  food
+  football
+  restaurant
+  soccer
+  tennis
+  toilet

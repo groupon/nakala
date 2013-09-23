@@ -1,0 +1,45 @@
+collection_reader:
+  class_name: com.groupon.nakala.db.TsvIdentifiableTextCollectionReader
+  parameters:
+    file_name: <PATH_TO_CLEAN_CORPUS_FILE>
+    separator: \t
+    id_field: 0
+    text_field: 2
+
+collection_analyzer:
+  class_name: com.groupon.ml.ClassifierCollectionAnalyzer
+  parameters:
+    analyzer:
+      class_name: com.groupon.ml.svm.LibSvmTextClassifier
+      parameters:
+        model:
+          class_name: com.groupon.nakala.core.ResourceReader
+          parameters:
+            file_name: <PATH_TO_MODEL_FILE>
+        labels:
+          class_name: com.groupon.nakala.core.ResourceReader
+          parameters:
+            file_name: <PATH_TO_LABELS_FILE>
+        representer:
+          class_name: com.groupon.nakala.core.TfFeatureWeightTextRepresenter
+          parameters:
+            normalize_by_length: true
+            features:
+              class_name: com.groupon.nakala.core.Features
+              parameters:
+                file_name: <PATH_TO_FEATURES_FILE>
+            tokenizer:
+              class_name: com.groupon.nakala.core.RegexpTokenizerStream
+            normalizers:
+              - class_name: com.groupon.nakala.normalization.MarkupRemover
+              - class_name: com.groupon.nakala.normalization.CaseNormalizer
+              - class_name: com.groupon.nakala.normalization.NumberNormalizer
+            scaler:
+              class_name: com.groupon.ml.svm.ValueScaler
+              parameters:
+                file_name: <PATH_TO_RANGE_FILE>
+
+data_stores:
+  - class_name: com.groupon.nakala.db.FlatFileStore
+    parameters:
+      file_name: <PATH_TO_OUTPUT_TSV_FILE>

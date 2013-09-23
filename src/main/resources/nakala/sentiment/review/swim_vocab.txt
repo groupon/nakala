@@ -1,0 +1,39 @@
+INCLUDE * FROM base
+INCLUDE PLUS_ONE,MINUS_ONE FROM cleanliness
+
+FEATURES
+  AQUA,AQUATIC,AQUATICS
+  indoor,kid,kids,kiddie,theme,themed,toddler,toddlers,WADING,slide,WATERFALL,WATERSLIDE POOL,POOLS
+  LAGOON,LAGOONS
+  landscaping,lap POOL,POOLS
+  lazy river,rivers
+  lounge chair,chairs
+  POOL,POOLS
+  pool sprinklers
+  POOLSIDE
+#  SWIM,SWAM,SWIMMING
+  WHIRLPOOL
+
+PROHIBITED OVERRIDE
+  bay
+  lake
+  ocean
+  sea
+  despite &2 problems
+  stained &2 wood
+  quality,comfort &0 inn
+  nice to know
+ 
+PLUS_ONE
+  clean water
+  warm
+
+MINUS_ONE
+  babies &2 diaper,diapers
+  chloride
+  congested
+  crowded
+  humid
+  rough
+  short
+  small

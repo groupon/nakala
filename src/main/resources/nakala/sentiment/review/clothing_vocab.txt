@@ -1,0 +1,106 @@
+INCLUDE * FROM base
+
+FEATURES
+  ACCESSORIES
+  CARDIGAN,CARDIGANS
+  CASUAL WEAR
+  CLOTHES,CLOTHING ~10 BOUTIQUE,BOUTIQUES,SHOP,SHOPS,STORE,STORES,UPSCALE
+  COSTUME,COSTUMES
+  cuba street
+  DAYWEAR
+  DRESS ~10 sale,sell,slacks
+  FOOTWEAR
+  formal WEAR
+  got,get,gets,getting,buy,buys,buying,bought &3 SHOE,SHOES
+  JACKET,JACKETS
+  johnsonville
+  KILBIRNIE
+  KNIT shop
+  LEATHER
+  LINGERIE
+  lower hutt
+  MALL,MALLS
+  MENSWEAR ~10 SUITS
+  OUTFIT,OUTFITS
+  PARAPARAUMU
+  PAJAMA,JAMAS sale
+  PORIRUA
+  PULLOVER,PULLOVERS
+  PULP SANDLER
+  sale ~10 BOUTIQUE,BOUTIQUES,SHOES
+  SCARVES
+  SHIRT,SHIRTS ~5 sale
+  SHOES BUY
+  SWEATERS
+  TIGHTS
+  upper hutt
+  velvet sale
+  WHOLESALE
+
+PROHIBITED OVERRIDE
+  actor,actors
+  after school
+  art
+  bar
+  boutique ~3 hotel
+  brings equipment
+  camps,camping
+  children,childrens party,parties
+  classes
+  coffee
+  ensemble
+  excursion,excursions
+  fashionistas
+  food
+  fresh
+  gallery
+  garden,gardens
+  hardware
+  health care
+  high society
+  hotel,hotels
+  instruction,instructions
+  kindergarten
+  laptop,laptops
+  martial
+  menu,menus
+  museum,museums
+  music
+  orchestra
+  outfitters
+  overnight
+  park
+  philharmonic
+  preschool
+  rafting
+  school,schools
+  software
+  souvenir
+  sports
+  supermarket
+  swimming
+  take off
+  theater,theatre
+  took off
+  tutoring
+  warehouse
+  wine
+  ymca
+  yoga
+
+PLUS_ONE
+  abundance
+  affordable
+  art
+  bargains
+  competitive
+  design,designer,designers,designs
+  elegant
+  fine
+  good,better,best choice
+  inventory
+  model
+  modern
+  profit
+  promotional
+  selection

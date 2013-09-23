@@ -1,0 +1,36 @@
+INCLUDE * FROM base
+
+FEATURES OVERRIDE
+  AIRPORT
+  AREA
+  BLOCK,BLOCKS
+  CITY,CITI,CITIES
+  DISTANCE
+  DISTRICT
+  DOWNTOWN
+  EVERYTHING
+  EXCLUSIVE
+  LOCATE,LOCATED,LOCATION
+  minutes away,to,from
+  NEIGHBORHOOD,NEIGHBOURHOOD
+  PARKING
+  PLACE,PLACES
+  PLAZA
+  PRIVATE
+  SHOPPING
+  SUBWAY
+  WALK,WALKS
+  WALKING DISTANCE
+
+PLUS_ONE
+  adjacent
+  around
+  close
+  near
+  nearby
+  not far
+  proximity
+  within
+
+MINUS_ONE
+  too,very far,long

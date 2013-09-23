@@ -1,0 +1,59 @@
+FEATURES
+  bathroom,bathrooms
+  bed,beds
+  blanket,blankets
+  boxspring,boxsprings
+  comforter,comforters
+  heater,heaters
+  king,queen,single,twin bed,beds,size,sized
+  kitchenette
+  linen,linens
+  mat,mattress,mattresses
+  pillow,pillows
+  room,rooms ~5 comfortable,bright,cosy,cozy,horrible,uncomfortable,terrible
+  sheet,sheets
+  sleep,slept like baby,babies
+  suite,suites
+
+PROHIBITED
+  bed breakfast
+  dining,exercise,workout,"work out",game,kid,kids room
+  food
+  location,locations
+  old style
+  service,services
+  view
+
+PLUS_ONE
+  bright
+  COMFORT,COMFORTABLE,COMFY
+  corner room,suite
+  COSY,COZY
+  cushy
+  fiber filled
+  fresh
+  heavenly
+  large bed,beds,bathroom,bathrooms
+  LUXURY,LUXURIOUS,LUXURIOUSLY,LUXE
+  relax,relaxed,relaxing
+  sleep,slept like baby,babies
+  soft
+  tender
+
+MINUS_ONE
+  broke,broken
+  cold
+  damp
+  dark
+  disaster
+  hard
+  harsh
+  too hot
+  leak,leaks,leaked,leaking
+  old
+  poor
+  shabby
+  slippery
+  tough
+  unbearable,unbearably
+  uncomfortable

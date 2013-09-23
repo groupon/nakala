@@ -1,0 +1,39 @@
+INCLUDE * FROM base
+
+FEATURES
+  car,underground,VALET ~3 PARKING
+  car &0 park
+  garage,garages
+  PARKING
+  PARKING garage,garages,spot,spots
+
+PROHIBITED OVERRIDE
+  basketball
+  fish
+  food
+  football
+  restaurant,restaurants
+  soccer
+  tennis
+  toilet,toilets
+  bicycle,bike parking
+  my,our parking space,spot
+
+PLUS_ONE
+  access
+  elevator,elevators
+  free
+  large
+  multi level
+  multilevel
+  space
+  spacious
+
+MINUS_ONE
+  dark
+  expensive
+  limited
+  small
+  tight
+  tiny
+  very little

@@ -1,0 +1,16 @@
+
+collection_reader:
+  class_name: com.groupon.nakala.db.SimpleTextCollectionReader
+  parameters:
+    separator: \t
+    text_field: 2 # 0-based index. In case of database fields, you can use field name.
+    file_name: training.tsv
+
+collection_analyzer:
+  class_name: com.groupon.nakala.analysis.IdfCollectionAnalyzer
+
+data_stores:
+  - class_name: com.groupon.nakala.db.FlatFileStore
+    parameters:
+      file_name: idfs.tsv
+

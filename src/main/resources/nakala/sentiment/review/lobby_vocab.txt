@@ -1,0 +1,37 @@
+INCLUDE * FROM base
+
+FEATURES
+  antechamber
+  atrium,atriums
+  check in
+  corridor,corridors
+  elevator,elevators
+  entrance hall
+  foyer
+  hallway,hallways
+  lift
+  lobby
+  porch
+  reception area
+  vestibule
+
+PROHIBITED OVERRIDE
+  lobbyist
+
+PLUS_ONE
+  bright
+  colorful
+  distinct
+  elegant
+  floor,floors
+  large
+  smooth
+
+MINUS_ONE
+  busy
+  conjested
+  crowded
+  dark
+  depressing
+  drab
+  smaller,smallest

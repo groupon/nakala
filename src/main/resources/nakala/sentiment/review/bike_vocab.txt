@@ -1,0 +1,17 @@
+INCLUDE * FROM base
+
+FEATURES
+  BICYCLE,BICYCLES
+  BIKE,BIKES
+  CYCLING
+  SPORTVELO
+  SURREY,SURREYS
+  TRIKE,TRIKES
+
+PLUS_ONE
+  paved &3 smooth
+
+MINUS_ONE
+  unpaved
+  muddy
+  uneven

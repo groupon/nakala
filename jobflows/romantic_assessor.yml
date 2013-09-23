@@ -1,0 +1,21 @@
+collection_reader:
+  class_name: com.groupon.nakala.db.JsonMerchantReviewCollectionReader
+  parameters:
+    file_name: <path_to_corpus>
+
+analyzer:
+  class_name: com.groupon.nakala.sentiment.SentimentAssessor
+  parameters:
+    domains:
+      - romance
+      - quiet
+      - cleanliness
+      - luxury
+      - food
+
+data_stores:
+  - class_name: com.groupon.nakala.db.FlatFileStore
+    parameters:
+      file_name: <path_to_output>
+
+number_of_threads: 7

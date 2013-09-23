@@ -1,0 +1,187 @@
+# Format of specs definitions
+#
+# <label>:
+#   value_type: {map,list,string,boolean,integer,double,string_or_integer}
+#   list_type: {<label>,string} # Only used when value_type is list.
+#   required:
+#     - <label>
+#     - <label>
+#     ...
+#   parameters:
+#     - <label>
+#     - <label>
+#     ...
+
+# Simple Job Flows all assume the existence of
+#  collection reader
+#  collection analyzer
+#  data stores
+# Do not change this for simple job flows
+
+top:
+  value_type: map
+  required:
+    - collection_reader
+    - analyzer
+    - data_stores
+    - number_of_threads
+
+collection_reader:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - collection_name
+    - db_name
+    - file_name
+    - host
+    - id_field
+    - label_field
+    - port
+    - proxy
+    - separator
+    - table_name
+    - text_field
+    - title_field
+
+analyzer:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - min_df
+    - normalizers
+    - representer
+    - stopwords
+    - tokenizer
+    - max_threshold
+    - min_threshold
+    - threshold_step
+    - domains
+
+data_stores:
+  value_type: list
+  list_type: data_store
+
+data_store:
+  value_type: map
+  required:
+    - class_name
+  parameters:
+    - collection_name
+    - db_name
+    - file_name
+    - host
+#      - id_field
+#      - label_field
+    - port
+#      - separator
+    - table_name
+#      - text_field
+#      - title_field
+
+normalizer:
+  value_type: map
+  required:
+    - class_name
+
+parameters:
+  value_type: map
+
+
+# class_name is special. When an item has the class_name attribute, an object of that class is instantiated
+# and if parameters are specified, the parameters are passed to the object.
+
+class_name:
+  value_type: string
+
+number_of_threads:
+  value_type: integer
+
+# Collection reader options
+
+# -- db collection reader options (including mongo)
+
+db_name:
+  value_type: string
+
+host:
+  value_type: string
+
+port:
+  value_type: string
+
+proxy:
+  value_type: string
+
+table_name:
+  value_type: string
+
+#  -- mongo collection reader options
+
+collection_name:
+  value_type: string
+
+
+# -- text file collection reader options
+
+file_name:
+  value_type: string
+
+separator:
+  value_type: string
+
+# -- these are also applicable to db readers
+
+id_field:
+  value_type: string_or_integer
+
+label_field:
+  value_type: string_or_integer
+
+text_field:
+  value_type: string_or_integer
+
+title_field:
+  value_type: string_or_integer
+
+
+# collection analyzer parameters
+
+# -- min_df is used in many analyzers
+
+min_df:
+  value_type: integer
+
+normalizers:
+  value_type: list
+  list_type: normalizer
+
+pass_filter:
+  value_type: map
+
+representer:
+  value_type: map
+
+stopwords:
+  value_type: map
+
+tokenizer:
+  value_type: map
+
+max_threshold:
+  value_type: double
+
+min_threshold:
+  value_type: double
+
+threshold_step:
+  value_type: double
+
+
+# Sentiment analyzer options
+
+domains:
+  value_type: list
+  list_type: string
+

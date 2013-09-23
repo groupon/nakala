@@ -1,0 +1,17 @@
+INCLUDE PROHIBITED FROM base
+
+INCLUDE PLUS_ONE,MINUS_ONE FROM food
+
+FEATURES
+  ROOM SERVICE
+
+PLUS_ONE
+  expert
+  fast
+  friendly
+  gentle
+  offer,offered
+
+MINUS_ONE
+  slow
+  delay,delays

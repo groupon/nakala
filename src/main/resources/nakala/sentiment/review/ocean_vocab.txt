@@ -1,0 +1,36 @@
+INCLUDE PLUS_ONE,MINUS_ONE FROM cleanliness
+INCLUDE PLUS_ONE,MINUS_ONE FROM quiet
+
+FEATURES
+  beach comber,combers,combing
+  beachcomber,beachcombers,beachcombing
+  DOLPHIN,DOLPHINS
+  ocean
+  sand
+  sea shell,shells,shore,shores
+  seashell,seashells,seashore,seashores
+  shelling
+  sun bathe,bathing,bathed,bath
+  sun tan,tanning,tans,tanned
+  SURF,SURFING,SURFER,SURFERS
+  tide pool,pools
+  tidepool,tidepools
+  wave,waves
+
+PROHIBITED
+  beach,beaches
+  lake,lakes
+  river,rivers
+  smell
+
+PLUS_ONE
+  fun
+  great
+  nice
+  sun
+
+MINUS_ONE
+  cold
+  far
+  long walk
+  shark,sharks

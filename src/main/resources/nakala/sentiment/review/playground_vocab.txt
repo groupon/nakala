@@ -1,0 +1,24 @@
+INCLUDE * FROM base
+
+FEATURES
+  CAROUSEL
+  CHIN UP BAR,BARS
+  CHUCK CHEESE,CHEESES
+  DISCOVERY ZONE
+  GAME ROOM,ROOMS
+  JUNGLE GYM,GYMS
+  MERRY AROUND,ROUND
+  MONKEY BAR,BARS
+  overhead ladder
+  play ground,grounds,house,houses
+  PLAYGROUND,PLAYGROUNDS
+  PLAYHOUSE,PLAYHOUSES
+  recreational equipment
+  see saw,saws
+  SEESAW,SEESAWS
+  SWINGSET,SWINGSETS
+  TRAPEZE
+  walking bridge
+
+PROHIBITED OVERRIDE
+  carousel inn

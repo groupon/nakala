@@ -1,0 +1,32 @@
+body * {
+    font-family: Arial, Helvetica, fixed;
+    font-size: 8pt;
+}
+
+.reportTable table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.reportTable table th {
+    background: blue;
+    color: yellow;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+.reportTable table td, .reportTable table th {
+    padding-right: 10px;
+    padding-left: 5px;
+    border-right: 1px dotted black;
+}
+
+.reportTable table td {
+    border-bottom: 1px dotted black;
+}
+

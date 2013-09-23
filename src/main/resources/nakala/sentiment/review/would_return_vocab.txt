@@ -1,0 +1,20 @@
+FEATURES
+  come,go back
+  return
+
+PLUS_ONE
+  come,go back
+  return
+  definitely
+
+MINUS_ONE
+  avoid
+  disappointed
+  disappointing
+  look,stay   "anywhere,somewhere else",elsewhere
+  stay,steer  away,"clear of"
+  hate it
+  worst
+
+PROHIBITED
+  "go back",return &2 home

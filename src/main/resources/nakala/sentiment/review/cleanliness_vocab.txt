@@ -1,0 +1,83 @@
+PROHIBITED
+  break mold,mould
+  cleaning service
+  needs &2 cleaned
+  shabby chic
+  smell ~2 book,books
+  hair dryer,dryers,drier,driers
+  garbage ~2 collect,collected
+
+PLUS_ONE
+  brand &0 new
+  room,rooms,kitchen,bathroom,bathrooms,sink,dish,dishes ~2 BRIGHT
+  CLEAN
+  CLEANED
+  CLEANSED
+  FLAWLESS
+  IMMACULATE
+  maintained
+  PURIFIED
+  SANITARY
+  smell,smells,smelled,bed,beds,linens,sheets,room,towels ~2 FRESH
+  SPARKLING
+  SPIC,SPICK SPAN
+  SPOTLESS
+  TIDY
+  well kept
+
+MINUS_ONE
+  ant,ants
+  bug,bugs
+  cockroach,cockroaches
+  contaminate,contaminates,contaminated,contaminating,contamination
+  dingy
+  dirt,dirty
+  disgust,disgusts,disgusted,disgusting ~2 smell,smelled,smells,look,looked,looks
+  dust,dusty
+  filth,filthy
+  garbage
+  grimy
+  gross
+  grungy
+  grubby
+  hair,hairs
+  hotel &4 cleaner than this
+  infest,infested,infests,infesting,infestation
+  maggot,maggots
+  mess,messy
+  mold,mould,moldy,mouldy
+  mucky
+  musty
+  need,needs,needed,needing &2 clean,cleaned,cleaning
+  "nursing home","porta potty,pottie" ~2 smell,smells,smelled,feel,feels,felt
+  odor,odors
+  pee
+  piss,pissed
+  poop,pooped
+  reek,reeks,reeked
+  rotten,rotted
+  rust,rusty,rusted
+  shabby
+  sheep
+  sloppy
+  slovenly
+  smell,smelly
+  soil,soiled
+  spider,spiders
+  squalid
+  squalor
+  stain,stains,stained
+  stink,stinks
+  stunk
+  sullied
+  squalid
+  unhygenic
+  unkept
+  unsightly
+  unsanitary
+  urine
+  vomit,vomited
+  worn out
+  would not allow,let dog
+  wouldn allow,let dog
+  yucky

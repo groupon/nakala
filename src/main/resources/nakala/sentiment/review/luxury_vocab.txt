@@ -1,0 +1,49 @@
+INCLUDE * FROM base
+
+FEATURES
+  BOUTIQUE hotel,hotels
+  CLASSY,CLASSIER,CLASSIEST
+  creme &0 de &0 la &0 creme
+  de luxe
+  DELUXE
+  EXCLUSIVE
+  FANCY
+  FIRSTCLASS
+  first class
+  four,five,4,5 star hotel,resort,restaurant,accommodation
+  high end
+  jet setter
+  LUXURY
+  LUXORIOUS
+  marble
+  OPULENT
+  ORNAMENTED
+  ORNATE
+  PAMPER,PAMPERED,PAMPERING,PAMPERS
+  POLISHED
+  PRICIEST
+  REFINED
+  SOPHISTICATED
+  STATELY
+  STERLING
+  trend setter
+  world class
+  YACHT
+
+PROHIBITED OVERRIDE
+  it suit,suits
+  luxury flat,flats,apartment,apartments
+  steak hot marble
+  sterling inn
+  advertise as luxury
+  you &2 fancy
+  try anything,nothing fancy
+  the luxury of
+
+PLUS_ONE
+  LUXURY,LUXURIOUS,LUXURIOUSLY,LUXE
+  not? issue,problem
+
+MINUS_ONE
+  nothing fancy
+  if &2 want &3 luxury &5 elsewhere,"somewhere else"
