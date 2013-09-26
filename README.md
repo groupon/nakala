@@ -1,7 +1,7 @@
 Nakala
 ======
 
-Groupon text mining package
+Text mining, text categorization, sentiment analysis, and NLP package
 
 Introduction
 ============
