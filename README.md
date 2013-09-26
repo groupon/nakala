@@ -47,7 +47,7 @@ Download the package
 --------------------
 
 ```
-git clone https://github.groupondev.com/npendar/nakala.git
+git clone https://github.com/groupon/nakala.git
 ```
 
 Build it
