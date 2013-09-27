@@ -368,6 +368,81 @@ following format:
 id    label1:score    label2:score ...
 ```
 
+Extract Snippets from Reviews
+-----------------------------
+
+Now say you have a cropus of consumer reviews, and you want to perform some sentiment analysis. You
+start by extracting some relevant positive and negative snippets. Look at the contents of 
+
+```
+jobflows/extract_snippets_from_reviews.yml
+```
+
+The file looks like this:
+
+```
+collection_reader:
+  class_name: com.groupon.nakala.db.TsvIdentifiableTextCollectionReader
+  parameters:
+    file_name: <path_to_corpus>
+    separator: \t
+    id_field: 0
+    text_field: 1
+
+analyzer:
+  class_name: com.groupon.nakala.sentiment.SentimentAnalyzer
+  parameters:
+    domains:
+      - cleanliness
+      - family
+      - food
+      - location
+      - luxury
+      - nightlife
+      - overall
+      - parking
+      - pet
+      - quiet
+      - romance
+      - staff
+      - value
+      - view
+      - would_return
+
+data_stores:
+  - class_name: com.groupon.nakala.db.FlatFileStore
+    parameters:
+      file_name: <path_to_output>
+
+number_of_threads: 7
+```
+
+This configuration file assumes that your corpus is in a tab-separated file with record ids in the first column,
+and the review text in the second column. It then calls the class SentimentAnalyzer and tells it to extract 
+positive and negative snippets for the domains listed (i.e., cleanliness, family, etc.). It will then store the
+results in a flat file. This is a multithreaded job flow and is run with 7 threads. Edit the file to point to
+the correct input and output. To run this type:
+
+```
+script/multithreadedjobflow -c jobflows/extract_snippets_from_reviews.yml
+```
+
+The output will look like the following:
+
+```
+<record-id>  <score>  <domain>  <snippet>  <highlighted-snippet>  <amplified-by-title>  <overridden-by-title>  <original-score>
+```
+
+where <record-id> is the original id of the review; <score> refers to the sentiment polarity of the snippet (score > 0.5 is 
+positive and score < 0.5 is negative); <domain> refers to the target of the sentiment (i.e., cleanliness, etc.); <snippet> 
+is the sentence extracted; <highlighted-snippet> is the same snippet with some keywords possibly highlighted;
+<amplify-by-title> is a boolean saying whether the title of the review (if present) has been used to amplify the 
+score of the snippet; <overriden-by-title> is another boolean flag that says whether the score has been overriden by
+the contents of the title (if present); and <original-score> is the score before overriding (if applicable).
+
+
+
+
 License
 =======
 
