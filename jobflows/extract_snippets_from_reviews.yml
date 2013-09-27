@@ -2,9 +2,9 @@ collection_reader:
   class_name: com.groupon.nakala.db.TsvIdentifiableTextCollectionReader
   parameters:
     file_name: <path_to_corpus>
-    separator: \|
+    separator: \t
     id_field: 0
-    text_field: 6
+    text_field: 1
 
 analyzer:
   class_name: com.groupon.nakala.sentiment.SentimentAnalyzer
