@@ -32,6 +32,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package com.groupon.nakala.core;
 
+import com.groupon.nakala.analysis.Initializable;
 import com.groupon.nakala.exceptions.ResourceInitializationException;
 import com.groupon.util.io.IoUtil;
 
@@ -41,7 +42,7 @@ import java.util.HashSet;
 /**
  * @author npendar@groupon.com
  */
-public class StringSet extends HashSet<String> {
+public class StringSet extends HashSet<String> implements Initializable {
     public void initialize(Class cls, String resource) throws ResourceInitializationException {
         try {
             _initialize(IoUtil.readLines(IoUtil.read(cls, resource)));
@@ -62,5 +63,21 @@ public class StringSet extends HashSet<String> {
         for (String line : r) {
             this.add(line.trim());
         }
+    }
+
+    @Override
+    public void initialize(Parameters params) throws ResourceInitializationException {
+        if (params.contains(Constants.FILE_NAME)) {
+            initialize(params.getString(Constants.FILE_NAME));
+        } else if (params.contains(Constants.RESOURCE)) {
+            initialize(getClass(), params.getString(Constants.RESOURCE));
+        } else {
+            throw new ResourceInitializationException("No resource or file name specified.");
+        }
+    }
+
+    @Override
+    public void shutdown() {
+        // do nothing
     }
 }

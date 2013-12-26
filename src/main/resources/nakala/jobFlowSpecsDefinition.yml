@@ -312,6 +312,11 @@ pass_filter:
 
 stopwords:
   value_type: map
+  required:
+    - class_name
+  parameters:
+    - file_name
+    - resource
 
 tokenizer:
   value_type: map
