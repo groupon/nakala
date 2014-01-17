@@ -43,38 +43,6 @@
         </plugins>
     </build>
 
-    <repositories>
-        <repository>
-            <id>releases</id>
-            <url>http://nexus/nexus/content/repositories/releases</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>oss-snapshots</id>
-            <url>http://nexus/nexus/content/repositories/sonatype-oss-snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>thirdparty</id>
-            <url>http://nexus/nexus/content/repositories/thirdparty/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>maven-central</id>
-            <url>http://nexus/nexus/content/repositories/central/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>org.mongodb</groupId>
