@@ -32,19 +32,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package com.groupon.nakala.core;
 
-import com.groupon.nakala.normalization.StringNormalizer;
-
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * @author npendar@groupon.com
  */
-public final class RegexpTokenizerStream implements TokenizerStream {
+public final class RegexpTokenizerStream extends AbstractTokenizerStream {
 
     private Pattern pat;
     private transient String text = "";
@@ -80,57 +74,5 @@ public final class RegexpTokenizerStream implements TokenizerStream {
         }
 
         return null;
-    }
-
-    @Override
-    public Set<String> getUniqueTokens(String s) {
-        setText(s);
-        Set<String> uniques = new HashSet<String>();
-        String tok = null;
-        while ((tok = next()) != null)
-            uniques.add(tok);
-        return uniques;
-    }
-
-    @Override
-    public List<String> getTokens(String s) {
-        setText(s);
-        List<String> tokens = new LinkedList<String>();
-        String tok = null;
-        while ((tok = next()) != null)
-            tokens.add(tok);
-        return tokens;
-    }
-
-    @Override
-    public Set<String> getUniqueTokens(String s, List<StringNormalizer> normalizers) {
-        setText(s);
-        Set<String> uniques = new HashSet<String>();
-        String tok = null;
-        while ((tok = next()) != null) {
-            if (normalizers != null) {
-                for (StringNormalizer normalizer : normalizers) {
-                    tok = normalizer.normalize(tok);
-                }
-            }
-            uniques.add(tok);
-        }
-        return uniques;
-    }
-
-    @Override
-    public List<String> getTokens(String s, List<StringNormalizer> normalizers) {
-        setText(s);
-        List<String> tokens = new LinkedList<String>();
-        String tok = null;
-        while ((tok = next()) != null) {
-            if (normalizers != null) {
-                for (StringNormalizer normalizer : normalizers) {
-                    tok = normalizer.normalize(tok);
-                }
-            }
-            tokens.add(tok);
-        }
-        return tokens;
     }
 }
