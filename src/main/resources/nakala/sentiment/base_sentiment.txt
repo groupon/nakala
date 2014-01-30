@@ -343,7 +343,7 @@ POSITIVE
 	condone
 	conducive
 	confer
-	confidence
+	score
 	confident
 	confute
 	congenial

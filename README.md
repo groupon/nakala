@@ -74,7 +74,7 @@ Let's assume you have a tab-separated training corpus at /home/jdoe/train.tsv wi
 record-id    categories    text
 ```
 
-where "categories" is a comma-separated list of category labels.
+where "categories" is a comma-separated list of category recommendations.
 
 ### Feature selection
 
@@ -99,7 +99,7 @@ collection_reader:
     file_name: /home/jdoe/train.tsv
     separator: \t
     id_field: 0        # 0-based index of the record id
-    label_field: 1     # 0-based index of the comma-separated labels
+    label_field: 1     # 0-based index of the comma-separated recommendations
     text_field: 2      # 0-based index of the website text
 
 collection_analyzer:
@@ -155,7 +155,7 @@ collection_reader:
       file_name: /home/jdoe/train.tsv
       separator: \t
       id_field: 0        # 0-based index of the record id
-      label_field: 1     # 0-based index of the comma-separated labels
+      label_field: 1     # 0-based index of the comma-separated recommendations
       text_field: 2      # 0-based index of the website text
   
 collection_analyzer:
@@ -189,7 +189,7 @@ data_stores:
       # file_name here is actually a file stem: This collection analyzer produces three files:
       #    filestem.model  : the svm model
       #    filestem.range  : value range file for scaling new data
-      #    filestem.labels : list of labels in the training data for labeling new data
+      #    filestem.recommendations : list of recommendations in the training data for labeling new data
       file_name: /home/jdoe/model
 ```
 
@@ -203,7 +203,7 @@ The training task will generate four files:
 
 - SVM model file: /home/jdoe/model.mod
 - Value ranges used for normalization: /home/jdoe/model.range
-- Labels used in the model: /home/jdoe/model.labels
+- Labels used in the model: /home/jdoe/model.recommendations
 - Best parameters found (for information only): /home/jdoe/model.params
 
 Test the classifier
@@ -229,7 +229,7 @@ collection_reader:
       file_name: /home/jdoe/test.tsv
       separator: \t
       id_field: 0        # 0-based index of the record id
-      label_field: 1     # 0-based index of the comma-separated labels
+      label_field: 1     # 0-based index of the comma-separated recommendations
       text_field: 2      # 0-based index of the website text
     
 collection_analyzer:
@@ -246,10 +246,10 @@ collection_analyzer:
           class_name: com.groupon.nakala.core.ResourceReader
           parameters:
             file_name: /home/jdoe/model.model
-        labels:
+        recommendations:
           class_name: com.groupon.nakala.core.ResourceReader
           parameters:
-            file_name: /home/jdoe/model.labels
+            file_name: /home/jdoe/model.recommendations
         representer:
           class_name: com.groupon.nakala.core.TfFeatureWeightTextRepresenter
           parameters:
@@ -326,10 +326,10 @@ collection_analyzer:
                     class_name: com.groupon.textmining.core.ResourceReader
                     parameters:
                       file_name: /home/jdoe/model.model
-                  labels:
+                  recommendations:
                     class_name: com.groupon.textmining.core.ResourceReader
                     parameters:
-                      file_name: /home/jdoe/model.labels
+                      file_name: /home/jdoe/model.recommendations
                   representer:
                     class_name: com.groupon.textmining.core.TfFeatureWeightTextRepresenter
                     parameters:
@@ -365,7 +365,7 @@ The output of the classifier will be saved in /home/jdoe/new_classifications.tsv
 following format:
 
 ```
-id    label1:score    label2:score ...
+id    recommendation1:score    label2:score ...
 ```
 
 Extract Snippets from Reviews

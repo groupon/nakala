@@ -32,25 +32,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package com.groupon.nakala.normalization;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * @author npendar@groupon.com
  */
 public class NumberNormalizer implements StringNormalizer {
-    private Pattern pat;
-
-    public NumberNormalizer() {
-        pat = Pattern.compile("^\\d+$");
-    }
-
     @Override
     public String normalize(String s) {
-        Matcher m = pat.matcher(s);
-        if (m.matches()) {
-            return "__num__";
-        }
-        return s;
+        return s.replaceAll("^\\d+$", "__num__");
     }
 }

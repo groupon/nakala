@@ -44,7 +44,7 @@ public class DomainNameNormalizerTest {
         StringNormalizer normalizer = new DomainNameNormalizer();
         Assert.assertEquals("google", normalizer.normalize("https://www.google.com/"));
         Assert.assertEquals("fourseasons", normalizer.normalize("http://www.fourseasons.com/siliconvalley/dining/in_room_dining/"));
-        Assert.assertEquals("bbc", normalizer.normalize("www1.bbc.co.uk"));
-        Assert.assertEquals("abcd", normalizer.normalize("abcd.ie"));
+        Assert.assertEquals("bbc.co", normalizer.normalize("http://www1.bbc.co.uk"));
+        Assert.assertEquals("abcd", normalizer.normalize("http://abcd.ie"));
     }
 }

@@ -40,7 +40,7 @@ import org.junit.Test;
  */
 public class MarkupRemoverTest extends TestCase {
     private static final String html = "<html><head><description>cool site!</head><body>this is the body.<form><button>something</button></form><p>great!</p><br/><SPAN>some span.</SPAN></body></HTML>";
-    private static final String txt = "cool site!  this is the body.  great!   some span.";
+    private static final String txt = "cool site!this is the body. something great! some span.";
 
     @Test
     public void testNormalize() throws Exception {

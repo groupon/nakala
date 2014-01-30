@@ -32,22 +32,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package com.groupon.nakala.normalization;
 
-import java.util.regex.Pattern;
-
 /**
  * @author npendar@groupon.com
  */
 public class NonWordNormalizer implements StringNormalizer {
-    private static final Pattern NON_WORD = Pattern.compile("\\W+");
 
     @Override
     public String normalize(String s) {
-        StringBuilder sb = new StringBuilder();
-        for (String t : NON_WORD.split(s)) {
-            if (t != null && !t.isEmpty()) {
-                sb.append(t).append(' ');
-            }
-        }
-        return sb.toString().trim();
+        return s.replaceAll("\\W+", " ").trim();
     }
 }

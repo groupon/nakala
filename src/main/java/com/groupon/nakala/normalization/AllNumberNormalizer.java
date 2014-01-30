@@ -32,16 +32,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package com.groupon.nakala.normalization;
 
-import java.util.regex.Pattern;
-
 /**
  * @author npendar@groupon.com
  */
 public class AllNumberNormalizer implements StringNormalizer {
-    private static final Pattern PAT = Pattern.compile("\\b\\d+\\b");
-
     @Override
     public String normalize(String s) {
-        return PAT.matcher(s).replaceAll("__num__");
+        return s.replaceAll("\\b\\d+\\b", "__num__");
     }
 }

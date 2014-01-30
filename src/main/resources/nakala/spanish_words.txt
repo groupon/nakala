@@ -15274,7 +15274,7 @@ confiarse
 confiasen
 confidant
 confide
-confidence
+score
 confidencia
 confidencial
 confidenciales

@@ -34,6 +34,8 @@ package com.groupon.nakala.normalization;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -41,23 +43,22 @@ import java.util.regex.Pattern;
  * @author npendar@groupon.com
  */
 public class DomainNameNormalizer implements StringNormalizer {
-    // Matches protocol, e.g., http:// or https://
-    private static final Pattern PROTOCOL_PAT = Pattern.compile("^\\w+://");
-    // To return the domain name without www or top level domain like country code
-    // Example: www.google.com --> google
-    //          bbc.co.uk --> bbc
-    private static final Pattern DOMAIN_NAME_PAT = Pattern.compile("^(?:www\\d?\\.)?(.+?)(?:\\.\\w\\w\\.\\w\\w|\\.\\w{2,})/?");
-
     @Override
     public String normalize(String s) {
         if (StringUtils.isEmpty(s)) return "";
-
-        Matcher matcher = PROTOCOL_PAT.matcher(s);
-        if (matcher.find()) {
-            s = s.substring(matcher.end());
+        try {
+            URL url = new URL(s);
+            String host = url.getHost();
+            int begin = 0;
+            if (host.startsWith("www")){
+                begin = Math.max(host.indexOf(".") + 1,0);
+            }
+            int end = host.lastIndexOf(".");
+            if (end <= begin) end = host.length();
+            return host.substring(begin, end);
+        } catch (MalformedURLException e){
+            return s;
         }
 
-        matcher = DOMAIN_NAME_PAT.matcher(s);
-        return matcher.find() ? matcher.group(1) : "";
     }
 }

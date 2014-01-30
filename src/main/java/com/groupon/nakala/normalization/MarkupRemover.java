@@ -32,38 +32,16 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package com.groupon.nakala.normalization;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import org.jsoup.Jsoup;
 
 /**
  * @author npendar@groupon.com
  */
 public class MarkupRemover implements StringNormalizer {
-    private static final Pattern[] PATS = {
-            Pattern.compile("<!DOCTYPE.+?>", Pattern.DOTALL),
-            Pattern.compile("<!--.+?-->", Pattern.DOTALL),
-//            Pattern.compile("<head.*?>.*?</head>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE),
-            Pattern.compile("<script.*?>.*?</script>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE),
-//            Pattern.compile("<title.*?>.*?</title>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE),
-//            Pattern.compile("<description.*?>.*?</description>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE),
-//            Pattern.compile("<keywords.*?>.*?</keywords>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE),
-            Pattern.compile("<meta.*?>.*?</meta>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE),
-            Pattern.compile("<form.*?>.*?</form>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE),
-            Pattern.compile("<input.*?>.*?</input>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE),
-            Pattern.compile("<button.*?>.*?</button>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE),
-            Pattern.compile("<.*?>")
-    };
-
     @Override
     public String normalize(String s) {
         if (s == null)
             return null;
-
-        for (Pattern pat : PATS) {
-            Matcher matcher = pat.matcher(s);
-            if (matcher.find())
-                s = matcher.replaceAll(" ");
-        }
-        return s;
+        return Jsoup.parse(s).text();
     }
 }

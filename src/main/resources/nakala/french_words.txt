@@ -12819,7 +12819,7 @@ confiante
 confiantes
 confiants
 confiât
-confidence
+score
 confidences
 confident
 confidente
