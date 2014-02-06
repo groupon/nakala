@@ -90,12 +90,8 @@ public class SparseRepresentation extends OpenMapRealVector {
 
     public SparseRepresentation scale(ValueScaler scaler) {
         SparseRepresentation rep = new SparseRepresentation(getDimension());
-        Iterator<Entry> iterator = sparseIterator();
-        while (iterator.hasNext()) {
-            Entry e = iterator.next();
-            int index = e.getIndex();
-            double val = e.getValue();
-            rep.setEntry(index, scaler.getScaledValue(index, val));
+        for (int i = 0; i < getDimension(); ++i) {
+            rep.setEntry(i, scaler.getScaledValue(i, getEntry(i)));
         }
         return rep;
     }
