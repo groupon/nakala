@@ -34,15 +34,15 @@ public abstract class AbstractTokenizerStream implements TokenizerStream {
 
     @Override
     public Set<String> getUniqueTokens(String s, List<StringNormalizer> normalizers) {
+        if (normalizers != null) {
+            for(StringNormalizer normalizer: normalizers) {
+                s = normalizer.normalize(s);
+            }
+        }
         setText(s);
         Set<String> uniques = new HashSet<String>();
-        String tok = null;
+        String tok;
         while ((tok = next()) != null) {
-            if (normalizers != null) {
-                for (StringNormalizer normalizer : normalizers) {
-                    tok = normalizer.normalize(tok);
-                }
-            }
             uniques.add(tok);
         }
         return uniques;
@@ -50,15 +50,15 @@ public abstract class AbstractTokenizerStream implements TokenizerStream {
 
     @Override
     public List<String> getTokens(String s, List<StringNormalizer> normalizers) {
+        if (normalizers != null) {
+            for(StringNormalizer normalizer: normalizers) {
+                s = normalizer.normalize(s);
+            }
+        }
         setText(s);
         List<String> tokens = new LinkedList<String>();
-        String tok = null;
+        String tok;
         while ((tok = next()) != null) {
-            if (normalizers != null) {
-                for (StringNormalizer normalizer : normalizers) {
-                    tok = normalizer.normalize(tok);
-                }
-            }
             tokens.add(tok);
         }
         return tokens;

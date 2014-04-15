@@ -231,6 +231,7 @@ analyzer:
     - labels
     - representer
     - number_of_threads
+    - predict_probabilities
 
 analyzers:
   value_type: list
@@ -258,6 +259,9 @@ labels:
   parameters:
     - file_name
     - resource
+
+predict_probabilities:
+  value_type: boolean
 
 # -- svm trainer options
 

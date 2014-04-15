@@ -114,7 +114,7 @@ public class TextUtils {
     public static Set<String> getWordSet(String s, TokenizerStream tokenizer) {
         Set<String> words = new HashSet<String>();
         tokenizer.setText(s);
-        String word = null;
+        String word;
         while ((word = tokenizer.next()) != null) {
             words.add(word);
         }

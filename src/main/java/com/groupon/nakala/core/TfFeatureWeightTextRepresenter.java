@@ -43,23 +43,20 @@ public class TfFeatureWeightTextRepresenter extends TFTextRepresenter {
 
     @Override
     public SparseRepresentation represent(String text) {
+        if (normalizers != null) {
+            for (StringNormalizer sn : normalizers) {
+                text = sn.normalize(text);
+            }
+        }
+
         SparseRepresentation rep = new SparseRepresentation(features.size());
         tokenizer.setText(text);
         int textSize = 0;
-        String tok = null;
+        String tok;
         while ((tok = tokenizer.next()) != null) {
             ++textSize;
-            if (normalizers != null) {
-                for (StringNormalizer sn : normalizers) {
-                    tok = sn.normalize(tok);
-                }
-            }
-
             int index = features.getIndex(tok);
-            if (index == -1) {
-                continue;
-            }
-
+            if (index == -1) { continue; }
             rep.addToEntry(index, 1);
         }
 
@@ -71,9 +68,7 @@ public class TfFeatureWeightTextRepresenter extends TFTextRepresenter {
         rep = rep.multiplyByFeatureWeights(features);
 
         // Scale
-        if (scaler != null) {
-            rep = rep.scale(scaler);
-        }
+        if (scaler != null) { rep = rep.scale(scaler); }
 
         return rep;
     }

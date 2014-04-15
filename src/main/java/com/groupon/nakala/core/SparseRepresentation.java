@@ -91,7 +91,8 @@ public class SparseRepresentation extends OpenMapRealVector {
     public SparseRepresentation scale(ValueScaler scaler) {
         SparseRepresentation rep = new SparseRepresentation(getDimension());
         for (int i = 0; i < getDimension(); ++i) {
-            rep.setEntry(i, scaler.getScaledValue(i, getEntry(i)));
+            double unscaled = getEntry(i);
+            if (unscaled != 0) rep.setEntry(i, scaler.getScaledValue(i, getEntry(i)));
         }
         return rep;
     }
@@ -128,7 +129,7 @@ public class SparseRepresentation extends OpenMapRealVector {
         while (iterator.hasNext()) {
             Entry e = iterator.next();
             svm_node node = new svm_node();
-            node.index = e.getIndex() + 1; // lib_svm assumes 1-based indeces
+            node.index = e.getIndex() + 1; // lib_svm assumes 1-based indices
             node.value = e.getValue();
             nodes.add(node);
         }

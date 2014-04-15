@@ -70,6 +70,7 @@ public class Constants {
     public static final String PARAMETERS = "parameters";
     public static final String PASS_FILTER = "pass_filter";
     public static final String POLITE = "polite";
+    public static final String PREDICT_PROBABILITIES = "predict_probabilities";
     public static final String QUERY = "query";
     public static final String REPRESENTER = "representer";
     public static final String RESOURCE = "resource";

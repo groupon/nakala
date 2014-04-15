@@ -49,11 +49,10 @@ public class TfFeatureWeightTextRepresenterTest extends TestCase {
     @Test
     public void testRepresent() throws Exception {
         Features features = new Features();
-        features.initialize(new StringReader("like\t0.1\ntest\t0.5\n"));
+        features.initialize(new StringReader("like\t0.1\ntests\t0.5\n"));
 
         List<StringNormalizer> normalizers = new ArrayList<StringNormalizer>();
         normalizers.add(new CaseNormalizer());
-        normalizers.add(new StemmingNormalizer());
 
         TokenizerStream tokenizer = new RegexpTokenizerStream();
 
@@ -65,14 +64,13 @@ public class TfFeatureWeightTextRepresenterTest extends TestCase {
         TextRepresenter representer = new TfFeatureWeightTextRepresenter();
         representer.initialize(params);
 
-        RealVector representation = representer.represent("I like testing with tests.");
-
+        RealVector representation = representer.represent("I like tests with tests.");
         assertEquals(0.1, representation.getEntry(0));
         assertEquals(1.0, representation.getEntry(1));
 
         params.set(Constants.NORMALIZE_BY_LENGTH, true);
         representer.initialize(params);
-        representation = representer.represent("I like testing with tests.");
+        representation = representer.represent("I like tests with tests.");
 
         assertEquals(0.02, representation.getEntry(0), 0.000001);
         assertEquals(0.2, representation.getEntry(1), 0.000001);

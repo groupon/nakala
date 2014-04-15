@@ -95,8 +95,10 @@ public class ValueScaler implements Initializable {
     @Override
     public void initialize(Parameters params) throws ResourceInitializationException {
         if (params.contains(Constants.FILE_NAME)) {
+            logger.debug("Loading range file " + params.getString(Constants.FILE_NAME));
             load(params.getString(Constants.FILE_NAME));
         } else if (params.contains(Constants.RESOURCE)) {
+            logger.debug("Loading range resource " + params.getString(Constants.RESOURCE));
             load(getClass(), params.getString(Constants.RESOURCE));
         } else if (params.contains(Constants.RESOURCE_STREAM)) {
             Object streamObj = params.get(Constants.RESOURCE_STREAM);
@@ -176,6 +178,7 @@ public class ValueScaler implements Initializable {
                 double max = Double.parseDouble(triple[2]);
                 ranges.put(index, new Range(min, max));
             }
+            logger.debug("Loaded " + ranges.size() + " values.");
         } catch (Exception e) {
             throw new ResourceInitializationException("Failed to load range file " + fileName);
         }
@@ -183,10 +186,11 @@ public class ValueScaler implements Initializable {
 
     public double getScaledValue(int index, double value) {
         Range range = ranges.get(index);
-        if (range == null || (range.getMin() == range.getMax())) {
+        if (range == null || range.getMin() == range.getMax()) {
             return targetMax; // feature is present and has only one value
         }
-        return ((value - range.getMin()) / range.getRange() * targetRange) + targetMin;
+        double scaled = ((value - range.getMin()) / range.getRange() * targetRange) + targetMin;
+        return Math.min(Math.max(targetMin, scaled), targetMax);
     }
 
     static class Range {

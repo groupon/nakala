@@ -43,6 +43,7 @@ import libsvm.svm_model;
 import libsvm.svm_node;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * @author npendar@groupon.com
@@ -51,6 +52,7 @@ public final class LibSvmTextClassifier extends TextClassifier {
 
     private int[] labelIndeces;
     private svm_model model;
+    private boolean predictProbabilities = true;
 
     @Override
     public void initialize(Parameters params) throws ResourceInitializationException {
@@ -59,6 +61,10 @@ public final class LibSvmTextClassifier extends TextClassifier {
             model = svm.svm_load_model(((ResourceReader) params.get(Constants.MODEL)).getReader());
         } catch (IOException e) {
             throw new ResourceInitializationException("Failed to load SVM model.", e);
+        }
+
+        if (params.contains(Constants.PREDICT_PROBABILITIES)){
+            predictProbabilities = params.getBoolean(Constants.PREDICT_PROBABILITIES);
         }
 
         labelIndeces = new int[labels.size()];
@@ -77,15 +83,21 @@ public final class LibSvmTextClassifier extends TextClassifier {
         IdentifiableTextContent tc = (IdentifiableTextContent) a;
 
         try {
-            svm_node[] rep = representer.represent(tc.getText()).toSvmNodes();
-
-            // Calculate probabilities of class membership
-            double[] probs = new double[labels.size()];
-            svm.svm_predict_probability(model, rep, probs);
-
+            SparseRepresentation sparseRepresentation = representer.represent(tc.getText());
+            svm_node[] rep = sparseRepresentation.toSvmNodes();
             ClassificationAnalysis analysis = new ClassificationAnalysis(tc.getId());
-            for (int i = 0; i < labelIndeces.length; ++i) {
-                analysis.addClassification(labels.get(labelIndeces[i]), probs[i] >= threshold ? probs[i] : 0d);
+            if (predictProbabilities) {
+                // Calculate probabilities of class membership
+                double[] probs = new double[labels.size()];
+                svm.svm_predict_probability(model, rep, probs);
+                for (int i = 0; i < labelIndeces.length; ++i) {
+                    analysis.addClassification(labels.get(labelIndeces[i]), probs[i] >= threshold ? probs[i] : 0d);
+                }
+            } else {
+                int classIndex = (int) svm.svm_predict(model, rep);
+                for (int i = 0; i < labels.size(); ++i){
+                    analysis.addClassification(labels.get(i), i == classIndex ? 1d : 0d);
+                }
             }
             return analysis;
         } catch (Exception e) {

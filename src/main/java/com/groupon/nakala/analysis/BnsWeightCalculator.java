@@ -54,7 +54,7 @@ public class BnsWeightCalculator extends AbstractCollectionAnalyzer {
     private List<StringNormalizer> normalizers;
     private TokenizerStream tokenizer;
     private StringSet stopwords;
-    private int minDF = 3;
+    private int minDF = 1;
     private int maxFeatureSize = 0;
     private double minFeatureWeight = 0d;
     private boolean useAbsoluteValues = true;
